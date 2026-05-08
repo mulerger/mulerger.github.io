@@ -3,67 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official portfolio of Mulugeta Geremew Geleso: public health modeller, analytics leader, disease modelling specialist, and data-to-policy strategist." />
+  <meta name="description" content="Mulugeta Geremew Geleso — Public health modeller, analytics leader, disease modelling specialist, and data-to-policy strategist." />
   <meta name="author" content="Mulugeta Geremew Geleso" />
   <title>Mulugeta Geremew Geleso | Public Health Modelling & Analytics</title>
 
   <style>
     :root {
-      --ink: #07111f;
-      --navy: #0b2545;
-      --deep: #0f172a;
-      --blue: #2563eb;
-      --cyan: #22d3ee;
-      --teal: #14b8a6;
-      --gold: #f5b942;
-      --green: #10b981;
-      --paper: #f8fafc;
-      --white: #ffffff;
+      --navy: #08233f;
+      --navy2: #0f355c;
+      --teal: #0f766e;
+      --mint: #dff7f3;
+      --gold: #e5a834;
+      --ink: #152033;
+      --text: #334155;
       --muted: #64748b;
-      --line: rgba(148, 163, 184, 0.25);
-      --shadow: 0 25px 70px rgba(2, 8, 23, 0.14);
-      --radius: 28px;
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --shadow: 0 18px 45px rgba(8, 35, 63, 0.12);
+      --radius: 24px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(34, 211, 238, 0.10), transparent 28%),
-        radial-gradient(circle at 90% 4%, rgba(245, 185, 66, 0.16), transparent 25%),
-        linear-gradient(180deg, #f8fafc 0%, #eef6f7 55%, #f8fafc 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
       color: var(--ink);
       line-height: 1.65;
-      overflow-x: hidden;
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
     .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
-    .topbar {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 100;
-      width: min(1180px, 92%);
-      padding: 12px 14px;
-      border: 1px solid rgba(255,255,255,0.30);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.78);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 22px;
     }
 
     .brand {
@@ -72,668 +65,515 @@
       gap: 10px;
       font-weight: 900;
       color: var(--navy);
-      letter-spacing: -0.03em;
       white-space: nowrap;
+      letter-spacing: -0.02em;
     }
 
-    .brand-dot {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--navy), var(--teal));
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
       color: white;
-      font-size: 0.86rem;
-      box-shadow: 0 10px 25px rgba(20, 184, 166, 0.35);
+      font-size: 0.82rem;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      box-shadow: 0 10px 25px rgba(15,118,110,0.25);
     }
 
-    .navlinks {
+    .nav-links {
       display: flex;
       gap: 6px;
+      align-items: center;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
-    .navlinks a {
-      padding: 8px 11px;
-      color: #334155;
-      border-radius: 999px;
+    .nav-links a {
+      color: #475569;
       font-weight: 750;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
+      padding: 8px 11px;
+      border-radius: 999px;
       transition: 0.2s ease;
     }
 
-    .navlinks a:hover {
-      color: var(--navy);
-      background: rgba(20, 184, 166, 0.10);
-    }
+    .nav-links a:hover { background: var(--mint); color: var(--teal); }
 
     .hero {
-      min-height: 100vh;
-      display: grid;
-      align-items: center;
-      padding: 130px 0 70px;
       position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(15,118,110,0.14), transparent 34%),
+        radial-gradient(circle at 92% 0%, rgba(229,168,52,0.18), transparent 28%),
+        linear-gradient(135deg, #f8fbfd 0%, #eef9f7 100%);
+      padding: 86px 0 72px;
     }
 
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
-      width: 650px;
-      height: 650px;
-      right: -260px;
-      top: 70px;
-      background: radial-gradient(circle, rgba(20,184,166,0.18), transparent 65%);
-      filter: blur(8px);
-      pointer-events: none;
+      right: -160px;
+      bottom: -160px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(15,118,110,0.08);
+      border: 1px solid rgba(15,118,110,0.16);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 52px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
       align-items: center;
       position: relative;
       z-index: 2;
     }
 
-    .kicker {
+    .label {
       display: inline-flex;
-      gap: 9px;
       align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(20, 184, 166, 0.10);
-      color: #0f766e;
-      border: 1px solid rgba(20,184,166,0.22);
+      gap: 8px;
+      color: var(--teal);
       font-weight: 900;
       font-size: 0.82rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
-    .kicker span {
+    .label::before {
+      content: "";
       width: 9px;
       height: 9px;
       border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 6px rgba(16,185,129,0.15);
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(229,168,52,0.18);
     }
 
     h1 {
-      font-size: clamp(2.65rem, 5.4vw, 5.25rem);
-      line-height: 0.94;
-      letter-spacing: -0.075em;
-      color: var(--deep);
-      margin-bottom: 24px;
+      font-size: clamp(1.15rem, 5vw, 4.05rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      color: var(--navy);
+      margin-bottom: 18px;
       white-space: nowrap;
     }
 
-    .gradient-text {
-      display: block;
-      background: linear-gradient(90deg, var(--navy), var(--teal), var(--blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    .headline {
+      font-size: clamp(1.35rem, 2.5vw, 2.25rem);
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      max-width: 790px;
+      margin-bottom: 18px;
+      font-weight: 850;
     }
 
-    .hero-subtitle {
-      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
-      color: #334155;
-      max-width: 760px;
+    .headline span { color: var(--teal); }
+
+    .intro {
+      color: var(--text);
+      font-size: 1.07rem;
+      max-width: 780px;
       margin-bottom: 28px;
     }
 
-    .hero-subtitle strong { color: var(--navy); }
-
-    .cta-row {
+    .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin: 30px 0 28px;
+      margin-bottom: 26px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      padding: 13px 18px;
+      gap: 8px;
+      padding: 12px 17px;
       border-radius: 999px;
-      font-weight: 900;
+      font-weight: 850;
+      transition: 0.22s ease;
       border: 1px solid transparent;
-      transition: 0.24s ease;
-      cursor: pointer;
       white-space: nowrap;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
-    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn.primary { background: var(--navy); color: white; }
+    .btn.gold { background: var(--gold); color: #1f2937; }
+    .btn.light { background: white; color: var(--navy); border-color: var(--line); }
 
-    .btn.primary {
-      background: linear-gradient(135deg, var(--navy), var(--teal));
-      color: white;
-    }
-
-    .btn.gold {
-      background: var(--gold);
-      color: #111827;
-    }
-
-    .btn.ghost {
-      background: rgba(255,255,255,0.75);
-      color: var(--navy);
-      border-color: var(--line);
-    }
-
-    .proof-row {
+    .metrics {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
-      max-width: 760px;
+      max-width: 790px;
     }
 
-    .proof {
-      padding: 14px 16px;
+    .metric {
+      background: rgba(255,255,255,0.82);
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: rgba(255,255,255,0.70);
-      backdrop-filter: blur(14px);
+      padding: 14px;
     }
 
-    .proof strong {
+    .metric strong {
       display: block;
       color: var(--teal);
       font-size: 1.15rem;
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 3px;
     }
 
-    .proof span {
-      color: var(--muted);
-      font-size: 0.87rem;
-      font-weight: 700;
-    }
+    .metric span { color: var(--muted); font-size: 0.88rem; font-weight: 700; }
 
-    .visual-panel {
-      position: relative;
-    }
-
-    .photo-card {
-      position: relative;
-      border-radius: 40px;
-      padding: 18px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,255,255,0.68)),
-        linear-gradient(135deg, rgba(20,184,166,0.30), rgba(37,99,235,0.20));
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.75);
-      overflow: hidden;
-    }
-
-    .photo-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -40px -80px auto;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle, rgba(245,185,66,0.32), transparent 68%);
-    }
-
-    .profile-frame {
+    .profile-card {
+      background: white;
+      border: 1px solid var(--line);
       border-radius: 32px;
-      overflow: hidden;
-      min-height: 430px;
-      background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+      padding: 18px;
+      box-shadow: var(--shadow);
       position: relative;
     }
 
-    .profile-frame img {
+    .profile-card::before {
+      content: "NDMC • EPHI";
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      z-index: 2;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(8,35,63,0.82);
+      color: white;
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+    }
+
+    .photo-wrap {
+      border-radius: 25px;
+      overflow: hidden;
+      background: #e2e8f0;
+      aspect-ratio: 4 / 5;
+    }
+
+    .photo-wrap img {
       width: 100%;
       height: 100%;
-      min-height: 430px;
       object-fit: cover;
       object-position: center;
-      filter: saturate(1.03) contrast(1.02);
     }
 
-    .floating-card {
-      position: absolute;
-      left: -28px;
-      bottom: 28px;
-      width: 260px;
-      padding: 18px;
-      border-radius: 24px;
-      background: rgba(7, 17, 31, 0.88);
+    .role-box {
+      margin-top: 16px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
       color: white;
-      border: 1px solid rgba(255,255,255,0.20);
-      box-shadow: 0 24px 55px rgba(2,8,23,0.30);
-      backdrop-filter: blur(16px);
+      padding: 18px;
     }
 
-    .floating-card small {
-      color: #a7f3d0;
-      font-weight: 900;
+    .role-box small {
+      display: block;
+      color: #c6fff4;
+      font-weight: 850;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      margin-bottom: 5px;
     }
 
-    .floating-card p {
-      margin-top: 8px;
-      color: #e2e8f0;
-      font-weight: 650;
-    }
+    .role-box p { color: #eefdfb; font-weight: 650; }
 
-    .section {
-      padding: 92px 0;
-      position: relative;
-    }
+    section { padding: 74px 0; }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 30px;
-      margin-bottom: 32px;
-    }
-
-    .label {
-      color: var(--teal);
-      font-weight: 950;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      margin-bottom: 8px;
+      gap: 24px;
+      margin-bottom: 28px;
     }
 
     h2 {
-      font-size: clamp(2rem, 3.6vw, 3.3rem);
-      line-height: 1.02;
-      letter-spacing: -0.055em;
-      color: var(--deep);
+      font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      color: var(--navy);
     }
 
     .lead {
-      color: #475569;
-      font-size: 1.06rem;
-      max-width: 740px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.02rem;
     }
 
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
     .card {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(148,163,184,0.25);
+      background: var(--card);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: 0 18px 45px rgba(15,23,42,0.07);
-      backdrop-filter: blur(16px);
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(8,35,63,0.06);
     }
 
     .card h3 {
       color: var(--navy);
-      font-size: 1.22rem;
+      font-size: 1.15rem;
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
 
-    .card p { color: #475569; }
+    .card p { color: var(--text); }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
-    .about-card {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .statement {
-      background: linear-gradient(135deg, var(--navy), #123b62 55%, var(--teal));
+    .story {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
       color: white;
-      border-radius: 28px;
-      padding: 30px;
-      min-height: 100%;
       position: relative;
       overflow: hidden;
     }
 
-    .statement::after {
+    .story::after {
       content: "Evidence → Decision → Impact";
       position: absolute;
-      right: -20px;
-      bottom: 12px;
+      right: -22px;
+      bottom: 8px;
       color: rgba(255,255,255,0.08);
-      font-size: 2.2rem;
       font-weight: 950;
+      font-size: 2.1rem;
       white-space: nowrap;
     }
 
-    .statement h3 { color: white; font-size: 1.65rem; }
-    .statement p { color: #dbeafe; margin-top: 12px; }
+    .story h3 { color: white; font-size: 1.45rem; }
+    .story p { color: #dbeafe; position: relative; z-index: 2; }
 
-    .clean-list {
+    .list {
       list-style: none;
       display: grid;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .clean-list li {
+    .list li {
       position: relative;
-      padding-left: 30px;
-      color: #334155;
+      padding-left: 28px;
+      color: var(--text);
       font-weight: 620;
     }
 
-    .clean-list li::before {
+    .list li::before {
       content: "✓";
       position: absolute;
       left: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
+      top: 1px;
+      width: 19px;
+      height: 19px;
       display: grid;
       place-items: center;
-      background: rgba(20,184,166,0.14);
+      border-radius: 50%;
+      background: var(--mint);
       color: var(--teal);
       font-size: 0.72rem;
-      font-weight: 950;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      font-weight: 900;
     }
 
     .skill {
-      padding: 18px;
-      border-radius: 22px;
       background: white;
       border: 1px solid var(--line);
-      box-shadow: 0 12px 26px rgba(15,23,42,0.05);
+      border-radius: 20px;
+      padding: 18px;
       transition: 0.22s ease;
     }
 
-    .skill:hover { transform: translateY(-4px); border-color: rgba(20,184,166,0.40); }
-    .skill-icon { font-size: 1.5rem; margin-bottom: 8px; }
-    .skill strong { display: block; color: var(--navy); margin-bottom: 4px; }
+    .skill:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(8,35,63,0.08); }
+    .skill b { display: block; color: var(--navy); margin-bottom: 5px; }
     .skill span { color: var(--muted); font-size: 0.9rem; }
+    .icon { font-size: 1.45rem; margin-bottom: 7px; }
 
-    .impact-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 26px;
-    }
-
-    .impact {
-      position: relative;
-      padding: 24px;
-      border-radius: 26px;
-      background: linear-gradient(180deg, white, rgba(255,255,255,0.76));
-      border: 1px solid var(--line);
-      overflow: hidden;
-    }
-
-    .impact::before {
-      content: "";
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      right: -40px;
-      top: -40px;
-      background: radial-gradient(circle, rgba(20,184,166,0.22), transparent 65%);
-    }
-
-    .impact b {
-      display: block;
-      font-size: 2rem;
-      color: var(--teal);
-      letter-spacing: -0.06em;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .project-card {
+    .project {
       min-height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      overflow: hidden;
     }
 
-    .project-card::after {
-      content: "";
-      width: 170px;
-      height: 170px;
-      position: absolute;
-      right: -70px;
-      bottom: -80px;
-      background: radial-gradient(circle, rgba(37,99,235,0.13), transparent 65%);
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
 
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .pill {
+    .tag {
+      background: var(--mint);
+      color: var(--teal);
+      border: 1px solid rgba(15,118,110,0.15);
+      border-radius: 999px;
+      padding: 5px 9px;
       font-size: 0.78rem;
       font-weight: 850;
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: rgba(20,184,166,0.10);
-      color: #0f766e;
-      border: 1px solid rgba(20,184,166,0.18);
     }
 
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .timeline-date {
-      padding: 12px 14px;
-      border-radius: 999px;
-      color: var(--teal);
-      background: rgba(20,184,166,0.10);
-      font-weight: 950;
-      text-align: center;
-      border: 1px solid rgba(20,184,166,0.18);
-    }
-
-    .publication-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .publication {
-      padding: 18px 20px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.76);
+    .publication, .talk {
+      background: white;
       border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
     }
 
-    .publication strong { color: var(--navy); }
-    .publication span { display: block; color: var(--muted); margin-top: 3px; font-size: 0.92rem; }
+    .publication strong, .talk strong { color: var(--navy); display: block; margin-bottom: 4px; }
+    .publication span, .talk span { color: var(--muted); font-size: 0.93rem; }
+
+    .contact {
+      padding-bottom: 90px;
+    }
 
     .contact-panel {
       background:
-        radial-gradient(circle at 20% 20%, rgba(34,211,238,0.22), transparent 35%),
-        linear-gradient(135deg, var(--deep), var(--navy) 45%, #0f766e);
-      border-radius: 40px;
-      padding: 42px;
+        radial-gradient(circle at 88% 0%, rgba(229,168,52,0.25), transparent 32%),
+        linear-gradient(135deg, var(--navy), var(--teal));
+      border-radius: 32px;
       color: white;
-      overflow: hidden;
-      position: relative;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
       box-shadow: var(--shadow);
     }
 
     .contact-panel h2 { color: white; }
-    .contact-panel p { color: #dbeafe; max-width: 760px; margin-top: 12px; }
-    .contact-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .contact-panel p { color: #e8fffb; margin-top: 10px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
 
     footer {
-      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
       text-align: center;
-      color: #64748b;
+      padding: 28px 0;
+      font-size: 0.94rem;
     }
 
-    .mobile-note { display: none; }
-
-    @media (max-width: 1050px) {
-      h1 { white-space: normal; }
-      .hero-grid, .about-card, .grid-2 { grid-template-columns: 1fr; }
-      .visual-panel { max-width: 520px; margin: 0 auto; }
-      .floating-card { left: 18px; }
-      .proof-row, .impact-strip, .expertise-grid { grid-template-columns: repeat(2, 1fr); }
-      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 980px) {
+      .hero-grid, .grid-2, .contact-panel { grid-template-columns: 1fr; }
+      .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .profile-card { max-width: 430px; margin: auto; }
+      .contact-actions { justify-content: flex-start; }
     }
 
-    @media (max-width: 740px) {
-      .topbar { position: static; transform: none; width: 92%; margin: 14px auto 0; border-radius: 26px; align-items: flex-start; }
-      .navlinks { display: none; }
-      .hero { padding: 46px 0 60px; min-height: auto; }
-      h1 { font-size: clamp(2.35rem, 13vw, 3.5rem); }
-      .proof-row, .impact-strip, .expertise-grid, .grid-3 { grid-template-columns: 1fr; }
-      .timeline-item { grid-template-columns: 1fr; }
-      .floating-card { position: static; width: auto; margin-top: 14px; }
-      .profile-frame, .profile-frame img { min-height: 330px; }
-      .section { padding: 64px 0; }
+    @media (max-width: 700px) {
+      .nav-inner { min-height: auto; padding: 14px 0; }
+      .nav-links { display: none; }
+      .hero { padding: 56px 0 48px; }
+      .hero-grid { gap: 28px; }
+      h1 { font-size: clamp(1.18rem, 5vw, 2rem); letter-spacing: -0.04em; }
+      .headline { font-size: 1.45rem; }
+      .metrics, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      section { padding: 54px 0; }
       .section-head { display: block; }
-      .contact-panel { padding: 28px; border-radius: 30px; }
-      .mobile-note { display: block; margin-top: 12px; color: var(--muted); font-size: 0.92rem; }
+      .role-box, .contact-panel { padding: 22px; }
     }
   </style>
 </head>
 
 <body>
-  <nav class="topbar" aria-label="Main navigation">
-    <a class="brand" href="#home" aria-label="Home">
-      <span class="brand-dot">MG</span>
-      <span>Mulugeta Geremew</span>
-    </a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#work">Work</a>
-      <a href="#research">Research</a>
-      <a href="#talks">Talks</a>
-      <a href="#contact">Contact</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <span class="brand-mark">MG</span>
+        <span>Mulugeta Geremew</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
   <header class="hero" id="home">
     <div class="container hero-grid">
       <div>
-        <div class="kicker"><span></span> Public Health Modelling • Analytics • Evidence Translation</div>
-        <h1>Mulugeta Geremew <span class="gradient-text">Geleso</span></h1>
-        <p class="hero-subtitle">
-          Mathematical and statistical modeller leading <strong>disease modelling, advanced analytics, visualization, and data-to-policy translation</strong> to support public health decisions in Ethiopia and global health collaborations.
+        <div class="label">Public Health Modelling • Data-to-Policy</div>
+        <h1>Mulugeta Geremew Geleso</h1>
+        <div class="headline">Disease modelling and analytics for <span>better health decisions</span>.</div>
+        <p class="intro">
+          Mathematical and statistical modeller leading advanced analytics, visualization, forecasting, geospatial intelligence, and evidence translation to support public health policy and programme decisions in Ethiopia and global health collaborations.
         </p>
-        <div class="cta-row">
-          <a class="btn primary" href="Mulugeta_Geremew_Geleso_CV.docx">⬇ Download CV</a>
-          <a class="btn gold" href="#work">Explore Work</a>
-          <a class="btn ghost" href="https://github.com/mulerger" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="actions">
+          <a class="btn primary" href="Mulugeta_Geremew_Geleso_CV.docx">Download CV</a>
+          <a class="btn gold" href="mailto:mulerger@gmail.com">Email Me</a>
+          <a class="btn light" href="https://github.com/mulerger" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn light" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-
-        <div class="proof-row" aria-label="Profile highlights">
-          <div class="proof"><strong>10+ yrs</strong><span>Applied public health analytics</span></div>
-          <div class="proof"><strong>NDMC</strong><span>National modelling leadership</span></div>
-          <div class="proof"><strong>Policy</strong><span>Evidence-to-action translation</span></div>
-          <div class="proof"><strong>Global</strong><span>Research and partner engagement</span></div>
-        </div>
-        <p class="mobile-note">Tip: upload this file as <strong>index.html</strong> together with <strong>profile.jpg</strong> and your CV file.</p>
-      </div>
-
-      <div class="visual-panel">
-        <div class="photo-card">
-          <div class="profile-frame">
-            <img src="profile.jpg" alt="Portrait of Mulugeta Geremew Geleso" />
-          </div>
-        </div>
-        <div class="floating-card">
-          <small>Current role</small>
-          <p>Head, Data Analytics, Modelling and Visualization Division, NDMC, Ethiopian Public Health Institute.</p>
+        <div class="metrics">
+          <div class="metric"><strong>10+ yrs</strong><span>Public health analytics</span></div>
+          <div class="metric"><strong>NDMC</strong><span>National modelling leadership</span></div>
+          <div class="metric"><strong>Policy</strong><span>Evidence translation</span></div>
+          <div class="metric"><strong>Global</strong><span>Research engagement</span></div>
         </div>
       </div>
+
+      <aside class="profile-card" aria-label="Profile photo and current role">
+        <div class="photo-wrap">
+          <img src="profile.jpg" alt="Mulugeta Geremew Geleso profile photo" />
+        </div>
+        <div class="role-box">
+          <small>Current Role</small>
+          <p>Head, Data Analytics, Modelling and Visualization Division, National Data Management and Analytics Center for Health, Ethiopian Public Health Institute.</p>
+        </div>
+      </aside>
     </div>
   </header>
 
   <main>
-    <section class="section" id="about">
+    <section id="about">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="label">Profile</div>
-            <h2>Turning complex health data into decisions that matter.</h2>
+            <h2>Clear science. Practical decisions. Stronger systems.</h2>
           </div>
-          <p class="lead">
-            My work sits at the intersection of epidemiology, modelling, analytics, visualization, and policy engagement.
-          </p>
+          <p class="lead">A portfolio built around applied modelling, public health intelligence, and institutional capacity for decision support.</p>
         </div>
-
-        <div class="about-card">
-          <div class="statement">
+        <div class="grid-2">
+          <div class="card story">
             <h3>Evidence should not stop at analysis.</h3>
-            <p>
-              It must be translated into the language of decision-makers, connected to programme priorities, and used to improve planning, preparedness, and public health impact.
-            </p>
+            <p>It should be translated into the language of decision-makers, connected to programme needs, and used to improve planning, preparedness, and impact.</p>
           </div>
           <div class="card">
-            <p>
-              Mulugeta Geremew Geleso is a mathematical and statistical modeller with experience applying epidemiological modelling, Bayesian methods, geospatial analysis, machine learning, forecasting, and visualization to strengthen public health decision-making.
-            </p>
+            <p>Mulugeta Geremew Geleso is a mathematical and statistical modeller with experience applying epidemiological modelling, Bayesian methods, geospatial analysis, machine learning, forecasting, and visualization to strengthen public health decision-making.</p>
             <br />
-            <p>
-              He leads modelling and analytics initiatives at the National Data Management and Analytics Center for Health, Ethiopian Public Health Institute, supporting national priorities including malaria, measles, TB, immunization, outbreak preparedness, health systems analytics, and policy-oriented evidence generation.
-            </p>
+            <p>He leads modelling and analytics initiatives at NDMC/EPHI, supporting national priorities including malaria, measles, TB, immunization, outbreak preparedness, health systems analytics, and policy-oriented evidence generation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="expertise">
+    <section id="expertise">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="label">Expertise</div>
             <h2>Technical depth with policy relevance.</h2>
           </div>
-          <p class="lead">A balanced profile for academic collaboration, high-level technical advisory work, and public health leadership.</p>
+          <p class="lead">Focused technical strengths for academic collaboration, senior advisory work, programme support, and public health leadership.</p>
         </div>
-
-        <div class="expertise-grid">
-          <div class="skill"><div class="skill-icon">🦠</div><strong>Disease Modelling</strong><span>Transmission, burden, intervention and scenario modelling.</span></div>
-          <div class="skill"><div class="skill-icon">📍</div><strong>Geospatial Analytics</strong><span>Risk mapping, spatial-temporal analysis and targeting.</span></div>
-          <div class="skill"><div class="skill-icon">🤖</div><strong>Machine Learning</strong><span>Forecasting, anomaly detection and predictive analytics.</span></div>
-          <div class="skill"><div class="skill-icon">📊</div><strong>Visualization</strong><span>Dashboards, briefs and decision-support tools.</span></div>
-          <div class="skill"><div class="skill-icon">🧮</div><strong>Bayesian Methods</strong><span>Uncertainty-aware inference and statistical modelling.</span></div>
-          <div class="skill"><div class="skill-icon">💉</div><strong>Vaccine Impact</strong><span>Immunization analytics and vaccine policy evidence.</span></div>
-          <div class="skill"><div class="skill-icon">🚨</div><strong>Outbreak Analytics</strong><span>Preparedness, early warning and response analytics.</span></div>
-          <div class="skill"><div class="skill-icon">🤝</div><strong>Policy Translation</strong><span>Engagement modelling and actionable communication.</span></div>
+        <div class="grid-4">
+          <div class="skill"><div class="icon">🦠</div><b>Disease Modelling</b><span>Transmission, burden, interventions and scenarios.</span></div>
+          <div class="skill"><div class="icon">📍</div><b>Geospatial Analytics</b><span>Risk mapping, spatial-temporal analysis and targeting.</span></div>
+          <div class="skill"><div class="icon">🤖</div><b>Machine Learning</b><span>Forecasting, anomaly detection and prediction.</span></div>
+          <div class="skill"><div class="icon">📊</div><b>Visualization</b><span>Dashboards, briefs and decision-support tools.</span></div>
+          <div class="skill"><div class="icon">🧮</div><b>Bayesian Methods</b><span>Uncertainty-aware inference and modelling.</span></div>
+          <div class="skill"><div class="icon">💉</div><b>Vaccine Impact</b><span>Immunization analytics and policy evidence.</span></div>
+          <div class="skill"><div class="icon">🚨</div><b>Outbreak Analytics</b><span>Preparedness, early warning and response.</span></div>
+          <div class="skill"><div class="icon">🤝</div><b>Policy Translation</b><span>Engagement modelling and actionable communication.</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="leadership">
+    <section id="leadership">
       <div class="container">
         <div class="section-head">
           <div>
@@ -741,95 +581,50 @@
             <h2>Building modelling capacity inside national systems.</h2>
           </div>
         </div>
-
         <div class="grid-2">
           <div class="card">
             <h3>Institutional Leadership</h3>
-            <ul class="clean-list">
+            <ul class="list">
               <li>Lead the Data Analytics, Modelling and Visualization Division at NDMC, EPHI.</li>
-              <li>Coordinate technical work across disease modelling, analytics, dashboards, and evidence products.</li>
+              <li>Coordinate disease modelling, analytics, dashboards, and evidence products.</li>
               <li>Support programme decisions through policy briefs, dashboards, presentations, and stakeholder engagement.</li>
               <li>Strengthen local modelling capacity through mentorship, training, and reproducible workflows.</li>
             </ul>
           </div>
           <div class="card">
             <h3>Strategic Value</h3>
-            <ul class="clean-list">
+            <ul class="list">
               <li>Connect modelling outputs with real programme questions and policy priorities.</li>
               <li>Translate complex methods into practical insights for decision-makers.</li>
               <li>Bridge government, academic, donor, and technical partner collaborations.</li>
-              <li>Promote engagement modelling, where policy actors are involved from question framing to interpretation.</li>
+              <li>Promote engagement modelling from question framing to interpretation.</li>
             </ul>
           </div>
-        </div>
-
-        <div class="impact-strip">
-          <div class="impact"><b>01</b><strong>Evidence Generation</strong><p>Robust analytics for priority public health questions.</p></div>
-          <div class="impact"><b>02</b><strong>Decision Support</strong><p>Dashboards, briefs and scenario outputs for programmes.</p></div>
-          <div class="impact"><b>03</b><strong>Capacity Building</strong><p>Training, mentorship and institutional modelling systems.</p></div>
-          <div class="impact"><b>04</b><strong>Policy Impact</strong><p>Actionable translation for planning and preparedness.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section id="work">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="label">Selected Work</div>
-            <h2>Portfolio of modelling and analytics priorities.</h2>
+            <h2>Modelling and analytics portfolio.</h2>
           </div>
-          <p class="lead">Focused on high-value public health questions where modelling can guide resource allocation, preparedness and programme strategy.</p>
+          <p class="lead">High-value public health questions where modelling can guide resource allocation, preparedness and programme strategy.</p>
         </div>
-
         <div class="grid-3">
-          <article class="card project-card">
-            <div>
-              <h3>Measles Risk and Immunization Analytics</h3>
-              <p>Risk modelling and evidence generation to support measles preparedness, supplemental immunization planning, and outbreak response.</p>
-            </div>
-            <div class="pill-row"><span class="pill">Risk modelling</span><span class="pill">SIA planning</span><span class="pill">Policy briefs</span></div>
-          </article>
-          <article class="card project-card">
-            <div>
-              <h3>Malaria Forecasting and Geospatial Intelligence</h3>
-              <p>Use of surveillance, climate, population and geospatial data to inform malaria planning, preparedness and targeting.</p>
-            </div>
-            <div class="pill-row"><span class="pill">Forecasting</span><span class="pill">GIS</span><span class="pill">Early warning</span></div>
-          </article>
-          <article class="card project-card">
-            <div>
-              <h3>TB and Health Systems Analytics</h3>
-              <p>Statistical and epidemiological analysis to understand disease burden, equity gaps, programme performance and health system priorities.</p>
-            </div>
-            <div class="pill-row"><span class="pill">Survival analysis</span><span class="pill">Burden</span><span class="pill">Equity</span></div>
-          </article>
-          <article class="card project-card">
-            <div>
-              <h3>AI-enabled Public Health Intelligence</h3>
-              <p>Machine learning, anomaly detection, forecasting and visualization to strengthen timely public health intelligence.</p>
-            </div>
-            <div class="pill-row"><span class="pill">ML</span><span class="pill">Anomaly detection</span><span class="pill">Dashboards</span></div>
-          </article>
-          <article class="card project-card">
-            <div>
-              <h3>Data Visualization and Decision Support</h3>
-              <p>Interactive dashboards and visual analytics that make complex modelling outputs interpretable for programme managers and policymakers.</p>
-            </div>
-            <div class="pill-row"><span class="pill">VizHub</span><span class="pill">R Shiny</span><span class="pill">Communication</span></div>
-          </article>
-          <article class="card project-card">
-            <div>
-              <h3>Institutional Modelling Capacity</h3>
-              <p>Strengthening national modelling systems through trainings, fellowships, technical standards, reproducibility, and mentorship.</p>
-            </div>
-            <div class="pill-row"><span class="pill">Training</span><span class="pill">Mentorship</span><span class="pill">Systems</span></div>
-          </article>
+          <article class="card project"><div><h3>Measles Risk and Immunization Analytics</h3><p>Risk modelling and evidence generation to support measles preparedness, supplemental immunization planning, and outbreak response.</p></div><div class="tags"><span class="tag">Risk modelling</span><span class="tag">SIA planning</span><span class="tag">Policy briefs</span></div></article>
+          <article class="card project"><div><h3>Malaria Forecasting and Geospatial Intelligence</h3><p>Use of surveillance, climate, population and geospatial data to inform malaria preparedness, targeting, and planning.</p></div><div class="tags"><span class="tag">Forecasting</span><span class="tag">GIS</span><span class="tag">Early warning</span></div></article>
+          <article class="card project"><div><h3>TB and Health Systems Analytics</h3><p>Statistical and epidemiological analysis to understand burden, equity gaps, programme performance and health systems priorities.</p></div><div class="tags"><span class="tag">Survival analysis</span><span class="tag">Burden</span><span class="tag">Equity</span></div></article>
+          <article class="card project"><div><h3>AI-enabled Public Health Intelligence</h3><p>Machine learning, anomaly detection, forecasting and visualization to strengthen timely public health intelligence.</p></div><div class="tags"><span class="tag">ML</span><span class="tag">Anomaly detection</span><span class="tag">Dashboards</span></div></article>
+          <article class="card project"><div><h3>Data Visualization and Decision Support</h3><p>Interactive dashboards and visual analytics that make modelling outputs interpretable for programmes and policymakers.</p></div><div class="tags"><span class="tag">VizHub</span><span class="tag">R Shiny</span><span class="tag">Communication</span></div></article>
+          <article class="card project"><div><h3>Institutional Modelling Capacity</h3><p>Strengthening modelling systems through trainings, fellowships, standards, reproducibility, and mentorship.</p></div><div class="tags"><span class="tag">Training</span><span class="tag">Mentorship</span><span class="tag">Systems</span></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="research">
+    <section id="research">
       <div class="container">
         <div class="section-head">
           <div>
@@ -837,17 +632,15 @@
             <h2>Selected publications and scientific outputs.</h2>
           </div>
         </div>
-        <div class="publication-list">
-          <div class="publication"><strong>Modeling the survival of tuberculosis patients in Eastern Zone of Tigray Regional State.</strong><span>Risk Management and Healthcare Policy.</span></div>
-          <div class="publication"><strong>Mathematical model of human papillomavirus dynamics with double-dose vaccination and its impact on cervical cancer.</strong><span>Applied infectious disease and vaccine modelling.</span></div>
-          <div class="publication"><strong>Universal test and treat programme and reduced TB incidence among adults taking ART in South Ethiopia.</strong><span>HIV/TB programme analytics.</span></div>
-          <div class="publication"><strong>Global strategies and effectiveness for COVID-19 prevention through contact tracing, quarantine, and isolation.</strong><span>COVID-19 public health intervention analysis.</span></div>
-          <div class="publication"><strong>Burden of disease and causes of mortality in Ethiopia, 2000–2016.</strong><span>National health metrics and burden of disease evidence.</span></div>
-        </div>
+        <div class="publication"><strong>Modeling the survival of tuberculosis patients in Eastern Zone of Tigray Regional State.</strong><span>Risk Management and Healthcare Policy.</span></div><br>
+        <div class="publication"><strong>Mathematical model of human papillomavirus dynamics with double-dose vaccination and its impact on cervical cancer.</strong><span>Applied infectious disease and vaccine modelling.</span></div><br>
+        <div class="publication"><strong>Universal test and treat programme and reduced TB incidence among adults taking ART in South Ethiopia.</strong><span>HIV/TB programme analytics.</span></div><br>
+        <div class="publication"><strong>Global strategies and effectiveness for COVID-19 prevention through contact tracing, quarantine, and isolation.</strong><span>COVID-19 public health intervention analysis.</span></div><br>
+        <div class="publication"><strong>Burden of disease and causes of mortality in Ethiopia, 2000–2016.</strong><span>National health metrics and burden of disease evidence.</span></div>
       </div>
     </section>
 
-    <section class="section" id="talks">
+    <section id="talks">
       <div class="container">
         <div class="section-head">
           <div>
@@ -855,40 +648,28 @@
             <h2>Invited talks, panels and international engagement.</h2>
           </div>
         </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">World Health Summit</div>
-            <div class="card"><h3>Speaker / Panel Contributor</h3><p>Contributed to discussions on data, modelling, and strategic decision-making for women’s, children’s and adolescents’ health.</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">NDMC Conference</div>
-            <div class="card"><h3>Modelling and Informatics Engagement</h3><p>Engaged in national and international dialogue on modelling and informatics for public health, disease modelling, analytics and decision support.</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">VIMC</div>
-            <div class="card"><h3>Stakeholder Group Member</h3><p>Contributes to vaccine impact modelling discussions and stakeholder engagement linked to global vaccine policy evidence.</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">National Programmes</div>
-            <div class="card"><h3>Policy and Technical Presentations</h3><p>Presented modelling outputs to public health programmes, technical working groups, partners and decision-makers.</p></div>
-          </div>
+        <div class="grid-2">
+          <div class="talk"><strong>World Health Summit</strong><span>Speaker / panel contributor on data, modelling, and strategic decision-making for women’s, children’s and adolescents’ health.</span></div>
+          <div class="talk"><strong>NDMC Conference</strong><span>Engagement on modelling and informatics for public health, analytics, and decision support.</span></div>
+          <div class="talk"><strong>Vaccine Impact Modelling Consortium</strong><span>Stakeholder group contribution to vaccine impact modelling and policy evidence.</span></div>
+          <div class="talk"><strong>National Programmes</strong><span>Policy and technical presentations to programmes, partners, technical working groups and decision-makers.</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="contact-panel">
-          <div class="label" style="color:#f6d98b;">Contact</div>
-          <h2>Let’s collaborate on modelling, analytics and public health decision support.</h2>
-          <p>
-            Based in Addis Ababa, Ethiopia. Available for academic collaboration, disease modelling, policy analytics, technical advising, dashboard development, and institutional capacity-building partnerships.
-          </p>
-          <div class="contact-grid">
+          <div>
+            <div class="label" style="color:#f8d98a;">Contact</div>
+            <h2>Let’s collaborate on modelling, analytics and public health decision support.</h2>
+            <p>Based in Addis Ababa, Ethiopia. Available for academic collaboration, disease modelling, policy analytics, technical advising, dashboard development, and institutional capacity-building partnerships.</p>
+          </div>
+          <div class="contact-actions">
             <a class="btn gold" href="mailto:mulerger@gmail.com">Email Me</a>
-            <a class="btn ghost" href="Mulugeta_Geremew_Geleso_CV.docx">Download CV</a>
-            <a class="btn ghost" href="https://github.com/mulerger" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn light" href="Mulugeta_Geremew_Geleso_CV.docx">Download CV</a>
+            <a class="btn light" href="https://github.com/mulerger" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn light" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -896,9 +677,7 @@
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Mulugeta Geremew Geleso · Public Health Modelling · Analytics · Data-to-Policy Translation
-    </div>
+    <div class="container">© 2026 Mulugeta Geremew Geleso · Public Health Modelling · Analytics · Data-to-Policy Translation</div>
   </footer>
 </body>
 </html>
