@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official academic and professional portfolio of Mulugeta Geremew Geleso: public health modeller, analytics leader, and disease modelling specialist." />
+  <title>Mulugeta Geremew Geleso | Public Health Modelling & Analytics</title>
+  <style>
+    :root{
+      --navy:#0b2545;--blue:#134e8a;--teal:#0f766e;--gold:#d99b28;
+      --text:#1f2937;--muted:#64748b;--bg:#f8fafc;--white:#fff;--line:#e2e8f0;
+      --shadow:0 18px 45px rgba(15,23,42,.12)
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1120px,92%);margin:auto}
+    header{background:linear-gradient(135deg,rgba(11,37,69,.97),rgba(15,118,110,.94));color:white;padding:72px 0 60px}
+    .hero{display:grid;grid-template-columns:1fr 330px;gap:38px;align-items:center}
+    .eyebrow{color:#f6d98b;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+    h1{font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.05;margin-bottom:18px}
+    .subtitle{font-size:1.18rem;max-width:820px;color:#e8f3f6;margin-bottom:20px}
+    .profile-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.22);border-radius:28px;padding:22px;box-shadow:var(--shadow);text-align:center}
+    .profile-card img{width:230px;height:230px;object-fit:cover;border-radius:50%;border:5px solid rgba(255,255,255,.85);box-shadow:0 14px 35px rgba(0,0,0,.25);margin-bottom:16px}
+    .profile-card p{color:#eef6f8;font-size:.98rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s}
+    .btn:hover{transform:translateY(-2px);text-decoration:none}
+    .primary{background:var(--gold);color:#111827}.secondary{border-color:rgba(255,255,255,.55);color:white}.light{background:white;color:var(--navy);border-color:var(--line)}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{color:var(--navy);font-weight:900}.nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem;font-weight:800}.nav-links a{color:var(--text)}
+    section{padding:58px 0}.section-label{color:var(--teal);font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+    h2{color:var(--navy);font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.15;margin-bottom:14px}.lead{color:var(--muted);max-width:860px;font-size:1.05rem;margin-bottom:20px}
+    .card{background:white;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.06);margin-bottom:18px}.card h3{color:var(--navy);font-size:1.12rem;margin-bottom:7px}.meta{color:var(--muted);font-size:.94rem;margin-bottom:10px;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid.two{grid-template-columns:repeat(2,1fr)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}.stat{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;text-align:center}.stat strong{display:block;color:var(--teal);font-size:1.8rem;margin-bottom:4px}
+    .tag-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.tag{background:#e6f5f3;color:var(--teal);border:1px solid #cdece8;padding:7px 11px;border-radius:999px;font-size:.88rem;font-weight:800}
+    ul.clean{list-style:none;display:grid;gap:12px}ul.clean li{padding-left:24px;position:relative}ul.clean li:before{content:"";position:absolute;left:0;top:10px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+    .timeline{display:grid;gap:16px}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:20px;background:white;border:1px solid var(--line);border-radius:20px;padding:22px}.year{color:var(--teal);font-weight:900}
+    .contact-box{background:linear-gradient(135deg,var(--navy),var(--teal));color:white;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}.contact-box h2{color:white}.contact-box p{color:#e6f5f3}
+    footer{background:#071a30;color:#cbd5e1;padding:26px 0;text-align:center;font-size:.95rem}
+    @media(max-width:900px){.hero,.grid,.grid.two,.stats,.contact-box{grid-template-columns:1fr}.profile-card img{width:190px;height:190px}.timeline-item{grid-template-columns:1fr}.nav-inner{align-items:flex-start;flex-direction:column;gap:10px}}
+  </style>
+</head>
+<body>
+<header id="home">
+  <div class="container hero">
+    <div>
+      <div class="eyebrow">Public Health Modelling • Analytics • Data-to-Policy</div>
+      <h1>Mulugeta Geremew Geleso</h1>
+      <p class="subtitle">Mathematical and statistical modeller leading disease modelling, advanced analytics, visualization, and evidence translation to inform public health policy and programme decisions in Ethiopia and beyond.</p>
+      <div class="actions">
+        <a class="btn primary" href="Mulugeta_Geremew_Geleso_CV.docx">Download CV</a>
+        <a class="btn secondary" href="https://github.com/mulerger" target="_blank">GitHub</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank">LinkedIn</a>
+        <a class="btn secondary" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="profile.jpg" alt="Mulugeta Geremew Geleso profile photo">
+      <p><strong>Head</strong>, Data Analytics, Modelling and Visualization Division</p>
+      <p>NDMC, Ethiopian Public Health Institute</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="brand">Mulugeta Geremew</div>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#leadership">Leadership</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#talks">Talks</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section id="about">
+  <div class="container">
+    <div class="section-label">Profile</div>
+    <h2>Modelling and analytics for real public health decisions</h2>
+    <div class="card">
+      <p>Mulugeta Geremew Geleso is a mathematical and statistical modeller with more than a decade of experience applying advanced analytics, epidemiological modelling, geospatial methods, machine learning, forecasting, and visualization to strengthen public health decision-making.</p>
+      <p style="margin-top:14px;">He currently serves as Head of the Data Analytics, Modelling and Visualization Division at the National Data Management and Analytics Center for Health, Ethiopian Public Health Institute. His work supports national priorities including malaria, measles, TB, immunization, outbreak preparedness, health systems analytics, and policy-oriented evidence generation.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>10+</strong><span>Years of experience</span></div>
+      <div class="stat"><strong>National</strong><span>Modelling leadership</span></div>
+      <div class="stat"><strong>Policy</strong><span>Evidence translation</span></div>
+      <div class="stat"><strong>Global</strong><span>Research engagement</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="container">
+    <div class="section-label">Expertise</div>
+    <h2>Core technical and strategic strengths</h2>
+    <p class="lead">A combined profile of statistical modelling, disease dynamics, health systems analytics, leadership, and data-to-policy translation.</p>
+    <div class="tag-list">
+      <span class="tag">Disease Modelling</span><span class="tag">Bayesian Inference</span><span class="tag">Spatial-Temporal Analysis</span><span class="tag">Machine Learning</span><span class="tag">Forecasting</span><span class="tag">Outbreak Analytics</span><span class="tag">Vaccine Impact Modelling</span><span class="tag">Public Health Surveillance</span><span class="tag">Data Visualization</span><span class="tag">R Programming</span><span class="tag">GIS</span><span class="tag">Policy Translation</span>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="container">
+    <div class="section-label">Leadership</div>
+    <h2>Institutional and policy-facing leadership</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>NDMC / EPHI Leadership</h3>
+        <p class="meta">Data Analytics, Modelling and Visualization Division</p>
+        <ul class="clean">
+          <li>Lead national modelling and analytics initiatives supporting public health programmes and policy priorities.</li>
+          <li>Coordinate evidence generation across disease modelling, surveillance analytics, geospatial analysis, and visualization.</li>
+          <li>Translate technical outputs into briefs, dashboards, presentations, and actionable recommendations.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Capacity Building and Partnerships</h3>
+        <p class="meta">National and international collaboration</p>
+        <ul class="clean">
+          <li>Mentor analysts, fellows, and researchers in applied disease modelling and health data science.</li>
+          <li>Support modelling workshops, technical trainings, and use-case development with national programmes.</li>
+          <li>Engage with academic, donor, government, and technical partners to strengthen local modelling capacity.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Selected Work</div>
+    <h2>Priority modelling and analytics areas</h2>
+    <div class="grid">
+      <div class="card"><h3>Measles Risk and Immunization Analytics</h3><p>Modelling and analytics to support measles risk assessment, supplemental immunization planning, and outbreak preparedness.</p></div>
+      <div class="card"><h3>Malaria Forecasting and Geospatial Intelligence</h3><p>Use of surveillance, climate, population, and geospatial data to inform malaria preparedness, targeting, and programme planning.</p></div>
+      <div class="card"><h3>TB and Health Systems Analytics</h3><p>Applied statistical and epidemiological analysis to support understanding of disease burden, equity, and programme performance.</p></div>
+      <div class="card"><h3>AI-enabled Public Health Analytics</h3><p>Application of machine learning, forecasting, anomaly detection, and visualization for timely public health intelligence.</p></div>
+      <div class="card"><h3>Data Visualization and Decision Support</h3><p>Dashboards and visual analytics to make complex outputs interpretable for programme managers and policymakers.</p></div>
+      <div class="card"><h3>Institutional Modelling Capacity</h3><p>Strengthening national modelling systems through training, mentorship, technical standards, and reproducible workflows.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <div class="section-label">Research</div>
+    <h2>Selected publications and scientific outputs</h2>
+    <div class="card">
+      <ul class="clean">
+        <li>Modeling the survival of tuberculosis patients in Eastern Zone of Tigray Regional State.</li>
+        <li>Mathematical model of human papillomavirus dynamics with double-dose vaccination and its impact on cervical cancer.</li>
+        <li>Universal test and treat programme and reduced TB incidence among adults taking ART in South Ethiopia.</li>
+        <li>Global strategies and effectiveness for COVID-19 prevention through contact tracing, quarantine, and isolation.</li>
+        <li>Burden of disease and causes of mortality in Ethiopia, 2000–2016.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="container">
+    <div class="section-label">Visibility</div>
+    <h2>Invited talks, panels and international engagement</h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="year">World Health Summit</div><div><h3>Speaker / Panel Contributor</h3><p>Contributed to discussions on data, modelling, and strategic decision-making for women’s, children’s, and adolescents’ health.</p></div></div>
+      <div class="timeline-item"><div class="year">NDMC Conference</div><div><h3>Conference and Modelling Engagement</h3><p>Engaged in national and international dialogue on modelling and informatics for public health, including disease modelling, analytics, and decision support.</p></div></div>
+      <div class="timeline-item"><div class="year">VIMC</div><div><h3>Stakeholder Group Member</h3><p>Contributes to vaccine impact modelling discussions and stakeholder engagement linked to global vaccine policy evidence.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <div class="section-label" style="color:#f6d98b;">Contact</div>
+        <h2>Let’s collaborate on modelling, analytics, and public health decision support.</h2>
+        <p>Based in Addis Ababa, Ethiopia. Available for academic collaboration, public health modelling, policy analytics, technical advising, and institutional capacity-building partnerships.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:your-email@example.com">Email</a>
+        <a class="btn light" href="https://github.com/mulerger" target="_blank">GitHub</a>
+        <a class="btn light" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Mulugeta Geremew Geleso. Public Health Modelling, Analytics and Data-to-Policy Translation.</div></footer>
+</body>
+</html>
