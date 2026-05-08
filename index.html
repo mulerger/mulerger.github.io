@@ -3,411 +3,637 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mulugeta Geremew Geleso — Public Health Modelling, Analytics, and Data-to-Policy Translation." />
+  <meta name="description" content="Mulugeta Geremew Geleso — Public health modelling, analytics, and data-to-policy translation." />
+  <meta name="author" content="Mulugeta Geremew Geleso" />
   <title>Mulugeta Geremew Geleso</title>
 
   <style>
-    :root{
-      --bg:#fbfcfd;
-      --ink:#0f172a;
-      --text:#334155;
-      --muted:#64748b;
-      --line:#e2e8f0;
-      --navy:#06203d;
-      --teal:#0f766e;
-      --gold:#c99a3e;
-      --soft:#f0fdfa;
-      --card:#ffffff;
-      --shadow:0 18px 50px rgba(15,23,42,.08);
-      --radius:22px;
-      --max:1120px;
+    :root {
+      --bg: #fbfcfd;
+      --ink: #102033;
+      --text: #344357;
+      --muted: #66758a;
+      --line: #e4eaf0;
+      --navy: #061f3a;
+      --teal: #0f766e;
+      --gold: #c99a3e;
+      --soft: #eef8f6;
+      --white: #ffffff;
+      --shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 1080px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-      line-height:1.65;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .container{width:min(var(--max),92%);margin:auto}
 
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(251,252,253,.92);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
+    html {
+      scroll-behavior: smooth;
     }
-    .nav-inner{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      color:var(--navy);
-      font-weight:900;
-      white-space:nowrap;
-      letter-spacing:-.02em;
-    }
-    .brand-mark{
-      width:38px;
-      height:38px;
-      border-radius:12px;
-      background:var(--navy);
-      color:white;
-      display:grid;
-      place-items:center;
-      font-size:.82rem;
-      font-weight:900;
-    }
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .nav-links a{
-      color:var(--muted);
-      font-weight:750;
-      font-size:.93rem;
-      padding:8px 10px;
-      border-radius:999px;
-    }
-    .nav-links a:hover{background:var(--soft);color:var(--teal)}
 
-    .hero{
-      padding:84px 0 76px;
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), 92%);
+      margin: auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(251, 252, 253, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      color: var(--navy);
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 750;
+      transition: 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+      background: var(--soft);
+    }
+
+    .hero {
+      padding: 78px 0 64px;
       background:
-        radial-gradient(circle at 84% 10%,rgba(15,118,110,.10),transparent 28%),
-        linear-gradient(180deg,#ffffff 0%,#f7fbfb 100%);
-      border-bottom:1px solid var(--line);
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.18fr) 360px;
-      gap:54px;
-      align-items:center;
-    }
-    .eyebrow{
-      color:var(--teal);
-      font-size:.78rem;
-      font-weight:900;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      margin-bottom:18px;
-    }
-    h1{
-      font-size:clamp(1.38rem,4.5vw,3.8rem);
-      line-height:1.03;
-      letter-spacing:-.055em;
-      color:var(--navy);
-      white-space:nowrap;
-      margin-bottom:18px;
-    }
-    .tagline{
-      font-size:clamp(1.35rem,2.45vw,2.22rem);
-      line-height:1.16;
-      letter-spacing:-.035em;
-      font-weight:850;
-      max-width:820px;
-      margin-bottom:18px;
-      color:var(--ink);
-    }
-    .tagline span{color:var(--teal)}
-    .intro{
-      max-width:800px;
-      font-size:1.08rem;
-      color:var(--text);
-      margin-bottom:28px;
-    }
-    .actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:30px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 17px;
-      border-radius:999px;
-      font-weight:850;
-      border:1px solid transparent;
-      transition:.2s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-    .btn-primary{background:var(--navy);color:white}
-    .btn-gold{background:var(--gold);color:#111827}
-    .btn-light{background:white;color:var(--navy);border-color:var(--line)}
-
-    .quick-stats{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      max-width:820px;
-    }
-    .stat{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:15px;
-    }
-    .stat strong{
-      display:block;
-      color:var(--teal);
-      font-size:1.12rem;
-      line-height:1.1;
-      margin-bottom:4px;
-    }
-    .stat span{
-      color:var(--muted);
-      font-size:.88rem;
-      font-weight:700;
+        radial-gradient(circle at 85% 12%, rgba(15, 118, 110, 0.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fcfb 100%);
+      border-bottom: 1px solid var(--line);
     }
 
-    .portrait-card{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:16px;
-      box-shadow:var(--shadow);
-    }
-    .portrait{
-      border-radius:22px;
-      overflow:hidden;
-      aspect-ratio:4/5;
-      background:#e2e8f0;
-    }
-    .portrait img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center;
-    }
-    .role-box{
-      margin-top:16px;
-      padding:17px;
-      border-radius:18px;
-      background:var(--navy);
-      color:white;
-    }
-    .role-box small{
-      display:block;
-      color:#b7f5ed;
-      font-size:.76rem;
-      text-transform:uppercase;
-      letter-spacing:.09em;
-      font-weight:900;
-      margin-bottom:6px;
-    }
-    .role-box p{color:#eaf7fb;font-weight:650;line-height:1.55}
-
-    section{padding:72px 0}
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap:28px;
-      margin-bottom:28px;
-    }
-    .label{
-      color:var(--teal);
-      font-size:.78rem;
-      font-weight:900;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      margin-bottom:8px;
-    }
-    h2{
-      color:var(--navy);
-      font-size:clamp(1.75rem,3.2vw,2.65rem);
-      line-height:1.08;
-      letter-spacing:-.045em;
-      max-width:760px;
-    }
-    .lead{
-      color:var(--muted);
-      max-width:690px;
-      font-size:1.02rem;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 52px;
+      align-items: center;
     }
 
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-
-    .card,.skill,.publication,.talk{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:0 10px 26px rgba(15,23,42,.045);
-    }
-    .card h3,.publication strong,.talk strong{
-      display:block;
-      color:var(--navy);
-      font-size:1.15rem;
-      line-height:1.28;
-      margin-bottom:8px;
-    }
-    .card p,.publication span,.talk span{color:var(--text)}
-
-    .focus{
-      background:linear-gradient(135deg,var(--navy),#123a5c);
-      color:white;
-    }
-    .focus h3{color:white;font-size:1.45rem}
-    .focus p{color:#dbeafe}
-
-    .list{
-      list-style:none;
-      display:grid;
-      gap:11px;
-    }
-    .list li{
-      position:relative;
-      padding-left:29px;
-      color:var(--text);
-      font-weight:620;
-    }
-    .list li:before{
-      content:"";
-      position:absolute;
-      left:0;
-      top:.58em;
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:var(--teal);
-      box-shadow:0 0 0 5px rgba(15,118,110,.12);
+    .eyebrow {
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
     }
 
-    .skill{
-      padding:18px;
-      transition:.2s ease;
-    }
-    .skill:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .skill b{display:block;color:var(--navy);margin-bottom:4px}
-    .skill span{color:var(--muted);font-size:.9rem}
-    .icon{font-size:1.35rem;margin-bottom:7px}
-
-    .project{
-      min-height:235px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-    }
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      margin-top:18px;
-    }
-    .tag{
-      background:var(--soft);
-      color:var(--teal);
-      border-radius:999px;
-      padding:5px 9px;
-      font-size:.78rem;
-      font-weight:850;
+    h1 {
+      font-size: clamp(1.28rem, 4.2vw, 3.45rem);
+      line-height: 1.05;
+      letter-spacing: -0.052em;
+      color: var(--navy);
+      white-space: nowrap;
+      margin-bottom: 16px;
     }
 
-    .publication{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:18px;
-      align-items:center;
-      margin-bottom:14px;
-      border-radius:20px;
-    }
-    .publication a{
-      display:inline-flex;
-      padding:9px 13px;
-      border-radius:999px;
-      background:var(--navy);
-      color:white;
-      font-size:.86rem;
-      font-weight:850;
-      white-space:nowrap;
-    }
-    .publication a:hover{background:var(--teal)}
-
-    .date{
-      display:inline-flex;
-      width:fit-content;
-      background:var(--soft);
-      color:var(--teal);
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:.82rem;
-      font-weight:900;
-      margin-bottom:12px;
+    .headline {
+      max-width: 760px;
+      font-size: clamp(1.26rem, 2.1vw, 1.95rem);
+      line-height: 1.18;
+      font-weight: 850;
+      letter-spacing: -0.032em;
+      margin-bottom: 16px;
+      color: var(--ink);
     }
 
-    .contact-panel{
-      background:linear-gradient(135deg,var(--navy),var(--teal));
-      color:white;
-      border-radius:28px;
-      padding:34px;
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:24px;
-      align-items:center;
-      box-shadow:var(--shadow);
-    }
-    .contact-panel h2{color:white}
-    .contact-panel p{color:#e8fffb;margin-top:10px;max-width:760px}
-    .contact-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:flex-end;
+    .headline span {
+      color: var(--teal);
     }
 
-    footer{
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      text-align:center;
-      padding:28px 0;
-      font-size:.94rem;
+    .intro {
+      max-width: 760px;
+      color: var(--text);
+      font-size: 1.04rem;
+      margin-bottom: 24px;
     }
 
-    .fade{
-      opacity:0;
-      transform:translateY(14px);
-      transition:.65s ease;
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
     }
-    .fade.show{opacity:1;transform:translateY(0)}
 
-    @media(max-width:1020px){
-      .hero-grid,.grid-2,.contact-panel{grid-template-columns:1fr}
-      .portrait-card{max-width:410px;margin:auto}
-      .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
-      .contact-actions{justify-content:flex-start}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 0.94rem;
+      border: 1px solid transparent;
+      transition: 0.18s ease;
+      white-space: nowrap;
     }
-    @media(max-width:720px){
-      .nav-inner{min-height:auto;padding:14px 0}
-      .nav-links{display:none}
-      .hero{padding:56px 0}
-      h1{font-size:clamp(1.13rem,5vw,2rem);letter-spacing:-.04em}
-      .tagline{font-size:1.42rem}
-      .quick-stats,.grid-3,.grid-4{grid-template-columns:1fr}
-      .section-head{display:block}
-      section{padding:56px 0}
-      .publication{grid-template-columns:1fr}
-      .contact-panel{padding:24px;border-radius:24px}
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111827;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--navy);
+      border-color: var(--line);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 780px;
+    }
+
+    .stat {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 13px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--teal);
+      font-size: 1.08rem;
+      line-height: 1.15;
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .photo-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo {
+      overflow: hidden;
+      border-radius: 18px;
+      aspect-ratio: 4 / 5;
+      background: #e5edf2;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .role {
+      margin-top: 14px;
+      background: var(--navy);
+      color: white;
+      border-radius: 16px;
+      padding: 15px;
+    }
+
+    .role small {
+      display: block;
+      color: #a7f3e8;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .role p {
+      color: #eaf5f9;
+      font-size: 0.94rem;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .label {
+      color: var(--teal);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      max-width: 720px;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 660px;
+      font-size: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .card,
+    .skill,
+    .publication,
+    .talk,
+    .visitor-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3,
+    .publication strong,
+    .talk strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.1rem;
+      line-height: 1.28;
+      margin-bottom: 7px;
+    }
+
+    .card p,
+    .publication span,
+    .talk span {
+      color: var(--text);
+    }
+
+    .focus {
+      background: linear-gradient(135deg, var(--navy), #123a5c);
+      color: white;
+    }
+
+    .focus h3 {
+      color: white;
+      font-size: 1.32rem;
+    }
+
+    .focus p {
+      color: #dbeafe;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 26px;
+      color: var(--text);
+      font-weight: 620;
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 5px rgba(15, 118, 110, 0.12);
+    }
+
+    .skill {
+      padding: 17px;
+      transition: 0.18s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .skill b {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .skill span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .icon {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .project {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tags {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: var(--soft);
+      color: var(--teal);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 0.76rem;
+      font-weight: 850;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 12px;
+      border-radius: 18px;
+    }
+
+    .publication a {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: white;
+      font-size: 0.84rem;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .publication a:hover {
+      background: var(--teal);
+    }
+
+    .date {
+      display: inline-flex;
+      width: fit-content;
+      background: var(--soft);
+      color: var(--teal);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .visitor-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .visitor-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .visitor-card img {
+      height: 28px;
+    }
+
+    .contact-panel {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: white;
+      border-radius: 24px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel h2 {
+      color: white;
+    }
+
+    .contact-panel p {
+      color: #e8fffb;
+      margin-top: 8px;
+      max-width: 760px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      justify-content: flex-end;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      padding: 26px 0;
+      font-size: 0.93rem;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: 0.55s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        max-width: 390px;
+        margin: auto;
+      }
+
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        min-height: auto;
+        padding: 13px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 50px 0;
+      }
+
+      h1 {
+        font-size: clamp(1.08rem, 4.8vw, 1.85rem);
+        letter-spacing: -0.035em;
+      }
+
+      .headline {
+        font-size: 1.38rem;
+      }
+
+      .stats,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .publication,
+      .visitor-card {
+        grid-template-columns: 1fr;
+        display: block;
+      }
+
+      .publication a {
+        margin-top: 12px;
+      }
+
+      .visitor-card img {
+        margin-top: 10px;
+      }
+
+      .contact-panel {
+        padding: 22px;
+      }
     }
   </style>
 </head>
@@ -435,9 +661,9 @@
       <div class="fade">
         <div class="eyebrow">Public Health Modelling • Analytics • Policy</div>
         <h1>Mulugeta Geremew Geleso</h1>
-        <div class="tagline">Turning health data into <span>decisions, preparedness, and impact</span>.</div>
+        <div class="headline">Turning health data into <span>better decisions</span>.</div>
         <p class="intro">
-          Mathematical and statistical modeller leading disease modelling, geospatial analytics, forecasting, visualization, and data-to-policy translation for public health programmes and global health collaborations.
+          Mathematical and statistical modeller working at the intersection of disease modelling, geospatial analytics, forecasting, visualization, and data-to-policy translation.
         </p>
 
         <div class="actions">
@@ -447,7 +673,7 @@
           <a class="btn btn-light" href="https://www.linkedin.com/in/mulugeta-geremew-0485729a/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
-        <div class="quick-stats">
+        <div class="stats">
           <div class="stat"><strong>10+ yrs</strong><span>Public health analytics</span></div>
           <div class="stat"><strong>NDMC</strong><span>National modelling leadership</span></div>
           <div class="stat"><strong>Policy</strong><span>Evidence translation</span></div>
@@ -455,13 +681,13 @@
         </div>
       </div>
 
-      <aside class="portrait-card fade">
-        <div class="portrait">
+      <aside class="photo-card fade">
+        <div class="photo">
           <img src="profile.jpg" alt="Mulugeta Geremew Geleso profile photo" />
         </div>
-        <div class="role-box">
+        <div class="role">
           <small>Current role</small>
-          <p>Head, Data Analytics, Modelling and Visualization Division, National Data Management and Analytics Center for Health, Ethiopian Public Health Institute.</p>
+          <p>Head, Data Analytics, Modelling and Visualization Division, NDMC, Ethiopian Public Health Institute.</p>
         </div>
       </aside>
     </div>
@@ -473,22 +699,22 @@
         <div class="section-head fade">
           <div>
             <div class="label">Profile</div>
-            <h2>Simple mission: better evidence for better public health decisions.</h2>
+            <h2>Public health modelling and analytics for action.</h2>
           </div>
-          <p class="lead">A clean academic-policy portfolio focused on modelling, analytics, and decision support.</p>
+          <p class="lead">Simple, practical, and policy-oriented work focused on evidence generation, preparedness, and programme decision-making.</p>
         </div>
 
         <div class="grid-2">
           <div class="card focus fade">
             <h3>What I do</h3>
-            <p>I connect modelling with real programme questions, translating complex analyses into practical outputs for planning, preparedness, and policy action.</p>
+            <p>I support public health programmes by translating complex health data into clear modelling outputs, dashboards, briefs, and decision-ready evidence.</p>
           </div>
           <div class="card fade">
-            <h3>Professional focus</h3>
+            <h3>Focus areas</h3>
             <ul class="list">
               <li>Disease modelling and outbreak analytics</li>
               <li>Geospatial risk mapping and forecasting</li>
-              <li>Visualization and data-to-policy translation</li>
+              <li>Data visualization and policy translation</li>
               <li>Institutional modelling capacity building</li>
             </ul>
           </div>
@@ -501,12 +727,12 @@
         <div class="section-head fade">
           <div>
             <div class="label">Expertise</div>
-            <h2>Technical strengths with practical policy value.</h2>
+            <h2>Technical strengths with practical value.</h2>
           </div>
         </div>
 
         <div class="grid-4">
-          <div class="skill fade"><div class="icon">🦠</div><b>Disease Modelling</b><span>Transmission, burden, scenarios and interventions.</span></div>
+          <div class="skill fade"><div class="icon">🦠</div><b>Disease Modelling</b><span>Transmission, burden, intervention and scenario modelling.</span></div>
           <div class="skill fade"><div class="icon">📍</div><b>Geospatial Analytics</b><span>Risk mapping, spatial analysis and targeting.</span></div>
           <div class="skill fade"><div class="icon">📈</div><b>Forecasting</b><span>Early warning, trends and preparedness analytics.</span></div>
           <div class="skill fade"><div class="icon">📊</div><b>Visualization</b><span>Dashboards, briefs and decision-support products.</span></div>
@@ -523,7 +749,7 @@
         <div class="section-head fade">
           <div>
             <div class="label">Selected work</div>
-            <h2>Focused workstreams with national decision relevance.</h2>
+            <h2>Focused workstreams with decision relevance.</h2>
           </div>
         </div>
 
@@ -531,7 +757,7 @@
           <article class="card project fade">
             <div>
               <h3>Measles Risk & Immunization Analytics</h3>
-              <p>Risk modelling and evidence generation to support preparedness, supplemental immunization planning, and outbreak response.</p>
+              <p>Risk modelling and evidence generation to support preparedness, vaccination planning, and outbreak response.</p>
             </div>
             <div class="tags"><span class="tag">Risk</span><span class="tag">SIA</span><span class="tag">Policy</span></div>
           </article>
@@ -539,7 +765,7 @@
           <article class="card project fade">
             <div>
               <h3>Malaria Forecasting & Geospatial Intelligence</h3>
-              <p>Use of surveillance, climate, population, and geospatial data to support preparedness, targeting, and planning.</p>
+              <p>Surveillance, climate, population, and geospatial data to support preparedness, targeting, and planning.</p>
             </div>
             <div class="tags"><span class="tag">Forecasting</span><span class="tag">GIS</span><span class="tag">Early warning</span></div>
           </article>
@@ -560,7 +786,7 @@
         <div class="section-head fade">
           <div>
             <div class="label">Publications</div>
-            <h2>Selected publications with direct links.</h2>
+            <h2>Selected publications.</h2>
           </div>
         </div>
 
@@ -603,7 +829,7 @@
         <div class="section-head fade">
           <div>
             <div class="label">Speaking</div>
-            <h2>Selected talks and international engagement.</h2>
+            <h2>Selected talks and engagement.</h2>
           </div>
         </div>
 
@@ -611,26 +837,34 @@
           <div class="talk fade">
             <div class="date">May 6, 2026 · Nairobi, Kenya</div>
             <strong>World Health Summit Regional Meeting 2026</strong>
-            <span>Speaker in a session on dynamic modelling for strategic decision-making in women’s, children’s and adolescents’ health.</span>
+            <span>Speaker on dynamic modelling for strategic decision-making in women’s, children’s and adolescents’ health.</span>
           </div>
 
           <div class="talk fade">
             <div class="date">December 8–11, 2025 · IIT Bombay, India</div>
             <strong>International Conference on Modelling and Informatics for Public Health</strong>
-            <span>International engagement on modelling, analytics, digital tools and informatics for public health outcomes.</span>
+            <span>International engagement on modelling, analytics, digital tools, and informatics for public health outcomes.</span>
           </div>
 
           <div class="talk fade">
             <div class="date">Ongoing</div>
             <strong>Vaccine Impact Modelling Consortium</strong>
-            <span>Stakeholder contribution to vaccine impact modelling, policy evidence, and immunization decision-support discussions.</span>
+            <span>Stakeholder contribution to vaccine impact modelling and immunization decision-support discussions.</span>
           </div>
 
           <div class="talk fade">
             <div class="date">National programme engagements</div>
             <strong>Policy and Technical Presentations</strong>
-            <span>Presentations of modelling and analytics outputs to programmes, partners, technical working groups and decision-makers.</span>
+            <span>Presentations of modelling and analytics outputs to programmes, partners, technical working groups, and decision-makers.</span>
           </div>
+        </div>
+
+        <div class="visitor-card fade">
+          <div>
+            <strong style="color: var(--navy);">Website visitors</strong>
+            <p>This counter updates automatically after your website is published.</p>
+          </div>
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=mulerger.mulerger.github.io&left_text=Visitors" alt="Visitor counter" />
         </div>
       </div>
     </section>
@@ -640,8 +874,8 @@
         <div class="contact-panel fade">
           <div>
             <div class="label" style="color:#f5d58f;">Contact</div>
-            <h2>Let’s collaborate on modelling, analytics and public health decision support.</h2>
-            <p>Based in Addis Ababa, Ethiopia. Available for academic collaboration, disease modelling, policy analytics, technical advising, dashboard development, and institutional capacity-building partnerships.</p>
+            <h2>Let’s collaborate.</h2>
+            <p>Available for academic collaboration, disease modelling, policy analytics, technical advising, dashboard development, and institutional capacity-building partnerships.</p>
           </div>
           <div class="contact-actions">
             <a class="btn btn-gold" href="mailto:mulerger@gmail.com">Email Me</a>
