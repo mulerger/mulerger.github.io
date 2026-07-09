@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NDMC Public Health Policy Modelling Hackathon 2026 — programme information, family workspaces, materials and outcomes.">
+  <meta name="theme-color" content="#0b6b70">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NDMC Public Health Policy Modelling Hackathon 2026">
+  <meta property="og:description" content="Bridging modelling and policy to solve public health challenges.">
+  <meta property="og:url" content="https://mulerger.github.io/ndmc-public-health-modelling-hackathon/">
+  <link rel="canonical" href="https://mulerger.github.io/ndmc-public-health-modelling-hackathon/">
+  <title>NDMC Public Health Policy Modelling Hackathon 2026 | EPHI</title>
+
+  <style>
+    :root {
+      --blue: #1268a9;
+      --blue-dark: #0d4f82;
+      --green: #159447;
+      --teal: #0b6b70;
+      --ink: #17313b;
+      --text: #40565e;
+      --muted: #6b7d83;
+      --line: #dbe6e4;
+      --soft: #f2f7f6;
+      --paper: #ffffff;
+      --gold: #e4ad39;
+      --max: 1120px;
+      --radius: 18px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 2000;
+      padding: 10px 14px;
+      color: var(--ink);
+      background: white;
+      border: 2px solid var(--teal);
+      border-radius: 8px;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: none; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-row {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand img { width: 270px; max-height: 62px; object-fit: contain; object-position: left center; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #284850;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--teal); }
+
+    .nav-links .github-link {
+      padding: 10px 14px;
+      color: white;
+      background: var(--teal);
+      border-radius: 999px;
+    }
+
+    .nav-links .github-link:hover, .nav-links .github-link:focus-visible { color: white; background: var(--blue); }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      color: var(--ink);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .menu-button span,
+    .menu-button::before,
+    .menu-button::after {
+      content: "";
+      display: block;
+      width: 19px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 82px 0 64px;
+      background:
+        radial-gradient(circle at 92% 15%, rgba(21, 148, 71, 0.13), transparent 25%),
+        linear-gradient(135deg, #f8fbfc 0%, #f2f8f5 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(310px, 0.75fr);
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      color: var(--blue-dark);
+      font-size: clamp(2.75rem, 6.4vw, 5.15rem);
+      line-height: 0.99;
+      letter-spacing: -0.06em;
+    }
+
+    h1 span { color: var(--green); }
+
+    .lead {
+      max-width: 720px;
+      margin-bottom: 28px;
+      color: var(--text);
+      font-size: 1.12rem;
+    }
+
+    .event-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+    .event-meta span {
+      padding: 7px 11px;
+      color: var(--blue-dark);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 11px 17px;
+      color: white;
+      background: var(--teal);
+      border: 1px solid var(--teal);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover, .button:focus-visible { background: var(--blue); border-color: var(--blue); }
+    .button.secondary { color: var(--teal); background: white; border-color: var(--line); }
+    .button.secondary:hover, .button.secondary:focus-visible { color: var(--blue); border-color: var(--blue); }
+
+    .workspace-preview {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 22px 55px rgba(16, 76, 86, 0.11);
+    }
+
+    .preview-head {
+      padding: 20px 22px;
+      color: white;
+      background: linear-gradient(110deg, var(--blue), var(--green));
+    }
+
+    .preview-head small { display: block; opacity: 0.8; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .preview-head strong { display: block; margin-top: 3px; font-size: 1.28rem; }
+    .preview-list { display: grid; }
+    .preview-item { display: grid; grid-template-columns: 35px 1fr; gap: 12px; padding: 15px 20px; border-top: 1px solid var(--line); }
+    .preview-item:first-child { border-top: 0; }
+    .preview-number { color: var(--teal); font-weight: 900; }
+    .preview-item b { display: block; font-size: 0.92rem; }
+    .preview-item span { color: var(--muted); font-size: 0.8rem; }
+
+    section { padding: 84px 0; }
+    .soft-section { background: var(--soft); }
+    .section-head { max-width: 760px; margin-bottom: 38px; }
+    .kicker { margin-bottom: 9px; color: var(--teal); font-size: 0.74rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+    .kicker.light { color: #a8e2d1; }
+    h2 { margin-bottom: 14px; color: var(--blue-dark); font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.045em; }
+    .section-head p { margin-bottom: 0; color: var(--text); font-size: 1.04rem; }
+
+    .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: start; }
+    .about-copy p { color: var(--text); font-size: 1.03rem; }
+    .about-points { display: grid; gap: 10px; }
+    .about-point { padding: 17px 18px; background: var(--soft); border-left: 4px solid var(--green); border-radius: 0 12px 12px 0; }
+    .about-point b { display: block; color: var(--blue-dark); }
+    .about-point span { color: var(--muted); font-size: 0.88rem; }
+
+    .family-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .family-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;
+      padding: 28px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .family-top { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 25px; }
+    .family-number { color: var(--green); font-size: 0.76rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+    .branch-badge { padding: 5px 9px; color: var(--teal); background: #e7f4f1; border-radius: 999px; font-size: 0.7rem; font-weight: 850; }
+    .family-card h3 { margin-bottom: 10px; color: var(--blue-dark); font-size: 1.4rem; line-height: 1.22; }
+    .family-card p { margin-bottom: 24px; color: var(--text); font-size: 0.94rem; }
+    .family-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; }
+    .small-button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 11px; color: var(--teal); background: white; border: 1px solid var(--line); border-radius: 9px; text-decoration: none; font-size: 0.8rem; font-weight: 850; }
+    .small-button.primary { color: white; background: var(--teal); border-color: var(--teal); }
+    .small-button:hover, .small-button:focus-visible { color: white; background: var(--blue); border-color: var(--blue); }
+
+    .safety-note { margin-top: 20px; padding: 18px 20px; color: #445b61; background: #fff8e7; border: 1px solid #efd89e; border-radius: 14px; font-size: 0.9rem; }
+    .safety-note strong { color: #765a17; }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .workflow-step { min-height: 150px; padding: 20px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+    .workflow-step span { display: block; margin-bottom: 22px; color: var(--green); font-size: 0.75rem; font-weight: 900; }
+    .workflow-step b { display: block; color: var(--blue-dark); line-height: 1.3; }
+    .workflow-step small { display: block; margin-top: 7px; color: var(--muted); }
+
+    .programme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .programme-card { padding: 23px; background: white; border: 1px solid var(--line); border-top: 4px solid var(--teal); border-radius: 14px; }
+    .programme-card:nth-child(2n) { border-top-color: var(--green); }
+    .programme-card .day { color: var(--green); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+    .programme-card h3 { margin: 8px 0; color: var(--blue-dark); }
+    .programme-card p { margin-bottom: 0; color: var(--muted); font-size: 0.9rem; }
+
+    .resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .resource-card { padding: 24px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+    .resource-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 26px; color: white; background: var(--blue); border-radius: 11px; font-weight: 900; }
+    .resource-card h3 { margin-bottom: 8px; color: var(--blue-dark); }
+    .resource-card p { min-height: 65px; margin-bottom: 16px; color: var(--muted); font-size: 0.9rem; }
+    .text-link { color: var(--teal); font-weight: 850; text-underline-offset: 4px; }
+
+    .outcome-panel { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; padding: clamp(28px, 5vw, 54px); color: white; background: linear-gradient(125deg, var(--blue-dark), var(--teal)); border-radius: 24px; }
+    .outcome-panel h2 { color: white; }
+    .outcome-panel p { margin-bottom: 0; color: #d7e9ea; }
+    .status-list { display: grid; gap: 10px; }
+    .status-item { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 16px; background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.16); border-radius: 11px; }
+    .status-item b { font-size: 0.9rem; }
+    .status-item span { padding: 4px 8px; color: #18373d; background: #bfeada; border-radius: 999px; white-space: nowrap; font-size: 0.68rem; font-weight: 900; text-transform: uppercase; }
+
+    .site-footer { padding: 34px 0; background: #edf4f2; border-top: 1px solid var(--line); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .footer-row img { width: 245px; }
+    .footer-copy { color: var(--muted); font-size: 0.82rem; text-align: right; }
+    .footer-copy a { color: var(--teal); }
+
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (max-width: 980px) {
+      .brand img { width: 220px; }
+      .nav-links { gap: 13px; }
+      .hero-grid { grid-template-columns: 1fr 0.7fr; gap: 34px; }
+      .workflow { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 800px) {
+      .menu-button { display: block; }
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 20px;
+        right: 20px;
+        display: none;
+        align-items: stretch;
+        padding: 14px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 18px 40px rgba(20, 65, 75, 0.14);
+      }
+      .nav-links.open { display: grid; }
+      .nav-links a { display: block; padding: 9px; }
+      .nav-links .github-link { text-align: center; }
+      .hero-grid, .about-grid, .outcome-panel { grid-template-columns: 1fr; }
+      .workspace-preview { max-width: 560px; }
+      .programme-grid, .resource-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 590px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .brand img { width: 185px; }
+      .hero { padding: 56px 0 48px; }
+      h1 { font-size: clamp(2.65rem, 14vw, 4rem); }
+      .actions { display: grid; }
+      .button { width: 100%; }
+      section { padding: 66px 0; }
+      .family-grid, .programme-grid, .resource-grid, .workflow { grid-template-columns: 1fr; }
+      .workflow-step { min-height: auto; }
+      .workflow-step span { margin-bottom: 10px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#home" aria-label="Ethiopian Public Health Institute — hackathon home">
+        <img src="https://ephi.gov.et/wp-content/uploads/2021/03/ephi-logo-name-new-3.png" alt="Ethiopian Public Health Institute">
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span></button>
+
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#families">Families</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#outcomes">Outcomes</a></li>
+        <li><a class="github-link" href="https://github.com/mulerger/mulerger.github.io/tree/hackathon-workspaces" target="_blank" rel="noopener">GitHub workspaces ↗</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">NDMC Public Health Policy Modelling Hackathon 2026</div>
+          <h1>Bridging <span>modelling and policy</span> to solve public health challenges.</h1>
+          <p class="lead">A six-day collaborative event bringing public-health programme teams, modellers, data scientists and developers together to build practical prototypes around priority health questions.</p>
+          <div class="event-meta">
+            <span>1–6 July 2026</span>
+            <span>Stay Easy Plus Hotel</span>
+            <span>Addis Ababa</span>
+          </div>
+          <div class="actions">
+            <a class="button" href="#families">Open family workspaces ↓</a>
+            <a class="button secondary" href="#programme">View programme</a>
+          </div>
+        </div>
+
+        <aside class="workspace-preview" aria-label="Four family workspaces">
+          <div class="preview-head"><small>Collaborative GitHub</small><strong>Four family workspaces</strong></div>
+          <div class="preview-list">
+            <div class="preview-item"><span class="preview-number">01</span><div><b>Zero-dose burden</b><span>family-zero-dose</span></div></div>
+            <div class="preview-item"><span class="preview-number">02</span><div><b>Antimalarial allocation</b><span>family-antimalarial</span></div></div>
+            <div class="preview-item"><span class="preview-number">03</span><div><b>Measles alert rules</b><span>family-measles-alert</span></div></div>
+            <div class="preview-item"><span class="preview-number">04</span><div><b>Measles transmission</b><span>family-measles-transmission</span></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="kicker">About the hackathon</div>
+          <h2>From public-health questions to working prototypes.</h2>
+          <p>The hackathon was convened by the National Data Management and Analytics Center for Health at the Ethiopian Public Health Institute. Families worked with programme leads and technical mentors to clarify each challenge, review available data, develop code and prototypes, and prepare a clear policy or programme message.</p>
+          <p>The website keeps the event information, family workspaces, materials and outputs in one simple place.</p>
+        </div>
+        <div class="about-points">
+          <div class="about-point"><b>Programme-led challenges</b><span>Each family started with a specific public-health need.</span></div>
+          <div class="about-point"><b>Collaborative development</b><span>Code and documentation are organized through GitHub branches.</span></div>
+          <div class="about-point"><b>Continued improvement</b><span>Final outputs can be reviewed, refined and carried forward.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="families">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Family workspaces</div>
+          <h2>One branch for each challenge family.</h2>
+          <p>Each family has a dedicated branch for code, documentation, slides, outputs and approved data materials. Work stays separate during development and can be submitted to the shared consolidation branch when ready.</p>
+        </div>
+
+        <div class="family-grid">
+          <article class="family-card">
+            <div class="family-top"><span class="family-number">Family 01</span><span class="branch-badge">family-zero-dose</span></div>
+            <h3>District-level zero-dose burden</h3>
+            <p>Workspace for analysis, mapping, documentation and outputs supporting district-level prioritization of zero-dose children.</p>
+            <div class="family-actions">
+              <a class="small-button primary" href="https://github.com/mulerger/mulerger.github.io/tree/family-zero-dose/family-workspace" target="_blank" rel="noopener">Open branch ↗</a>
+              <a class="small-button" href="https://github.com/mulerger/mulerger.github.io/compare/hackathon-workspaces...family-zero-dose?expand=1" target="_blank" rel="noopener">Submit work</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <div class="family-top"><span class="family-number">Family 02</span><span class="branch-badge">family-antimalarial</span></div>
+            <h3>Antimalarial medicine forecasting and allocation</h3>
+            <p>Workspace for forecasting code, allocation logic, documentation, figures and the reviewable prototype.</p>
+            <div class="family-actions">
+              <a class="small-button primary" href="https://github.com/mulerger/mulerger.github.io/tree/family-antimalarial/family-workspace" target="_blank" rel="noopener">Open branch ↗</a>
+              <a class="small-button" href="https://github.com/mulerger/mulerger.github.io/compare/hackathon-workspaces...family-antimalarial?expand=1" target="_blank" rel="noopener">Submit work</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <div class="family-top"><span class="family-number">Family 03</span><span class="branch-badge">family-measles-alert</span></div>
+            <h3>Measles alert rules</h3>
+            <p>Workspace for surveillance rule development, threshold analysis, validation notes and programme-facing outputs.</p>
+            <div class="family-actions">
+              <a class="small-button primary" href="https://github.com/mulerger/mulerger.github.io/tree/family-measles-alert/family-workspace" target="_blank" rel="noopener">Open branch ↗</a>
+              <a class="small-button" href="https://github.com/mulerger/mulerger.github.io/compare/hackathon-workspaces...family-measles-alert?expand=1" target="_blank" rel="noopener">Submit work</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <div class="family-top"><span class="family-number">Family 04</span><span class="branch-badge">family-measles-transmission</span></div>
+            <h3>Measles transmission modelling</h3>
+            <p>Workspace for model code, parameters, assumptions, scenarios, figures and technical documentation.</p>
+            <div class="family-actions">
+              <a class="small-button primary" href="https://github.com/mulerger/mulerger.github.io/tree/family-measles-transmission/family-workspace" target="_blank" rel="noopener">Open branch ↗</a>
+              <a class="small-button" href="https://github.com/mulerger/mulerger.github.io/compare/hackathon-workspaces...family-measles-transmission?expand=1" target="_blank" rel="noopener">Submit work</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="safety-note"><strong>Data rule:</strong> Upload only public, de-identified or formally approved data. Restricted or patient-level data must remain in approved secure storage; commit only data dictionaries, access instructions and reproducible scripts.</div>
+
+        <div class="workflow" role="group" aria-label="Family submission workflow">
+          <div class="workflow-step"><span>01</span><b>Open your branch</b><small>Use the workspace assigned to your family.</small></div>
+          <div class="workflow-step"><span>02</span><b>Add the files</b><small>Code, docs, slides, outputs and approved data materials.</small></div>
+          <div class="workflow-step"><span>03</span><b>Commit clearly</b><small>Use short messages that explain each change.</small></div>
+          <div class="workflow-step"><span>04</span><b>Push or upload</b><small>Push directly if authorized, or use a fork and pull request.</small></div>
+          <div class="workflow-step"><span>05</span><b>Submit for review</b><small>Open a pull request to hackathon-workspaces.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programme">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Programme</div>
+          <h2>The six-day journey.</h2>
+          <p>A focused progression from challenge framing and team formation to prototype development, presentation and follow-up.</p>
+        </div>
+
+        <div class="programme-grid">
+          <article class="programme-card"><span class="day">Day 1</span><h3>Frame and form</h3><p>Opening, challenge presentations, clarification, skills matching and family formation.</p></article>
+          <article class="programme-card"><span class="day">Day 2</span><h3>Plan and set up</h3><p>Git/GitHub refresher, dialogue with decision-makers, repository setup and work planning.</p></article>
+          <article class="programme-card"><span class="day">Day 3</span><h3>Build</h3><p>Data preparation, exploratory analysis, modelling workflow and first prototype.</p></article>
+          <article class="programme-card"><span class="day">Day 4</span><h3>Review and refine</h3><p>Prototype refinement, programme feedback, interpretation and documentation.</p></article>
+          <article class="programme-card"><span class="day">Day 5</span><h3>Finalize</h3><p>Final analysis, demonstration flow, policy message, slides and submission readiness.</p></article>
+          <article class="programme-card"><span class="day">Day 6</span><h3>Present and continue</h3><p>Family presentations, feedback, recognition, closing and agreement on next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="materials">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Materials</div>
+          <h2>Everything needed to continue the work.</h2>
+          <p>Use the shared branch for common guidance and each family branch for challenge-specific files.</p>
+        </div>
+
+        <div class="resource-grid">
+          <article class="resource-card"><div class="resource-icon">01</div><h3>Shared workspace</h3><p>Common structure, contribution guidance and the consolidation area for final family submissions.</p><a class="text-link" href="https://github.com/mulerger/mulerger.github.io/tree/hackathon-workspaces" target="_blank" rel="noopener">Open shared branch ↗</a></article>
+          <article class="resource-card"><div class="resource-icon">02</div><h3>Family working guide</h3><p>Simple instructions for folders, file naming, commits, data handling and pull requests.</p><a class="text-link" href="https://github.com/mulerger/mulerger.github.io/blob/hackathon-workspaces/HACKATHON_WORKSPACES.md" target="_blank" rel="noopener">Read the guide ↗</a></article>
+          <article class="resource-card"><div class="resource-icon">03</div><h3>GitHub refresher</h3><p>A short introductory course for participants who need help with repositories, branches and pull requests.</p><a class="text-link" href="https://github.com/skills/introduction-to-github" target="_blank" rel="noopener">Open GitHub Skills ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <div class="container">
+        <div class="outcome-panel">
+          <div>
+            <div class="kicker light">Outcomes</div>
+            <h2>Four prototypes moving into review.</h2>
+            <p>The families’ final code, documentation, outputs and feedback are being consolidated. Public links will be added after technical review and confirmation that each item can be shared.</p>
+          </div>
+          <div class="status-list">
+            <div class="status-item"><b>Zero-dose burden prototype</b><span>In consolidation</span></div>
+            <div class="status-item"><b>Antimalarial forecasting prototype</b><span>In consolidation</span></div>
+            <div class="status-item"><b>Measles alert rules prototype</b><span>In consolidation</span></div>
+            <div class="status-item"><b>Measles transmission model</b><span>In consolidation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a href="https://ephi.gov.et/" target="_blank" rel="noopener"><img src="https://ephi.gov.et/wp-content/uploads/2021/03/ephi-logo-name-new-3.png" alt="Ethiopian Public Health Institute"></a>
+      <div class="footer-copy">NDMC Public Health Policy Modelling Hackathon 2026<br><a href="https://github.com/mulerger/mulerger.github.io/tree/hackathon-workspaces" target="_blank" rel="noopener">GitHub family workspaces</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      nav.classList.toggle('open', !isOpen);
+    });
+
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+      nav.classList.remove('open');
+    }));
+  </script>
+</body>
+</html>
