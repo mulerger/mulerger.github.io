@@ -2,6 +2,7 @@ const organisers = [
   {
     id: "mulugeta-geremew-geleso",
     name: "Mulugeta Geremew Geleso",
+    photo: "../profile.jpg",
     role: "Lead Organiser & Lead Facilitator · NDMC, EPHI",
     category: "Hackathon leadership",
     lead: true,
@@ -16,6 +17,7 @@ const organisers = [
   {
     id: "mesfin-diro",
     name: "Dr Mesfin Diro",
+    photo: "https://github.com/mesfind.png?size=320",
     role: "Organiser, Facilitator & Technical Mentor",
     category: "Coordination and technical support",
     bio: "Dr Mesfin Diro is a computational data scientist and Addis Ababa University faculty member specialising in machine learning, deep learning, modelling, high-performance computing and scientific-computing training. He supported overall coordination, mentoring and the collaborative Git/GitHub workflow used by the family teams.",
@@ -28,6 +30,7 @@ const organisers = [
   {
     id: "dawit-melese",
     name: "Dr Dawit Melese",
+    photo: "https://github.com/dawitmeleseg.png?size=320",
     role: "Organiser & Modelling Facilitator",
     category: "Technical support",
     bio: "Dr Dawit Melese is a public-health modeller whose work includes malaria network modelling and intervention analysis. He supported participant selection and helped teams strengthen their modelling approaches, interpretation and prototype development.",
@@ -49,6 +52,7 @@ const organisers = [
   {
     id: "leykun-getaneh",
     name: "Leykun Getaneh",
+    photo: "https://github.com/leykunget.png?size=320",
     role: "Git/GitHub Lead & Technical Mentor",
     category: "Collaborative development",
     bio: "Leykun Getaneh is a data scientist, statistician and lecturer working on disease modelling, forecasting and decision-support tools. He led practical Git and GitHub support and contributed technical mentorship, data provision and review throughout the hackathon.",
@@ -118,6 +122,7 @@ const hackers = [
   {
     id: "fentahun-bikale-kebede",
     name: "Fentahun Bikale Kebede",
+    photo: "https://github.com/Fentahun60.png?size=320",
     role: "Monitoring and Evaluation Specialist · Ministry of Health",
     category: "Family 1 · Zero-dose mapping",
     bio: "Fentahun Bikale Kebede is a Monitoring and Evaluation Specialist at Ethiopia's Ministry of Health. In the zero-dose family, he contributed to data preparation, modelling and interpretation for district-level immunisation mapping.",
@@ -142,6 +147,7 @@ const hackers = [
   {
     id: "girma-moges-mengistu",
     name: "Girma Moges Mengistu",
+    photo: "https://github.com/GirmaMM.png?size=320",
     role: "Researcher and Lecturer · Hawassa University",
     category: "Family 1 · Zero-dose mapping",
     bio: "Girma Moges Mengistu is a researcher and lecturer at Hawassa University. He contributed programming, data management and modelling skills to the zero-dose burden and immunisation mapping challenge.",
@@ -169,6 +175,8 @@ const hackers = [
   {
     id: "addisalem-workie-demsash",
     name: "Addisalem Workie Demsash",
+    photo: "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=q0kqIC4AAAAJ&citpid=1",
+    photoPosition: "center 25%",
     role: "Lecturer · Debre Berhan University",
     category: "Family 2 · Malaria allocation",
     bio: "Addisalem Workie Demsash is a lecturer at Debre Berhan University. He contributed a broad programming and statistical toolkit to malaria resource-allocation analytics and development of the family's modelling workflow.",
@@ -182,6 +190,7 @@ const hackers = [
   {
     id: "ewnetu-abebe-kassie",
     name: "Ewnetu Abebe Kassie",
+    photo: "https://github.com/Ewnetu8.png?size=320",
     role: "Academic Research Assistant I · AASTU",
     category: "Family 2 · Malaria allocation",
     bio: "Ewnetu Abebe Kassie is an Academic Research Assistant at Addis Ababa Science and Technology University. He supported malaria resource-allocation analysis through programming, modelling and prototype development.",
@@ -218,6 +227,7 @@ const hackers = [
   {
     id: "eyosias-wondwossen-teffera",
     name: "Eyosias Wondwossen Teffera",
+    photo: "https://github.com/eyo25.png?size=320",
     role: "AI Developer · BrainBite",
     category: "Family 3 · Measles alerts",
     bio: "Eyosias Wondwossen Teffera is an AI developer at BrainBite. He contributed software-development and prototyping skills to the measles outbreak alert-threshold family.",
@@ -230,6 +240,7 @@ const hackers = [
   {
     id: "shimels-derso-kebede",
     name: "Shimels Derso Kebede",
+    photo: "https://github.com/shimelsD.png?size=320",
     role: "Lecturer · Wollo University",
     category: "Family 3 · Measles alerts",
     bio: "Shimels Derso Kebede is a lecturer at Wollo University. He contributed statistical programming, database and software skills to the development of measles outbreak alert rules.",
@@ -243,6 +254,7 @@ const hackers = [
   {
     id: "yebelay-berelie-berehan",
     name: "Yebelay Berelie Berehan",
+    photo: "https://github.com/Yebelay.png?size=320",
     role: "Researcher and Lecturer · Debre Markos University",
     category: "Family 3 · Measles alerts",
     bio: "Yebelay Berelie Berehan is a researcher and lecturer at Debre Markos University. He supported statistical analysis, interpretation and documentation for the measles alert-threshold challenge.",
@@ -267,6 +279,8 @@ const hackers = [
   {
     id: "zinabu-bekele-tadese",
     name: "Zinabu Bekele Tadese",
+    photo: "https://zinabu-b.github.io/img/about.png",
+    photoPosition: "center 20%",
     role: "Lecturer · Samara University",
     category: "Family 3 · Measles alerts",
     bio: "Zinabu Bekele Tadese is a lecturer at Samara University. He contributed programming, data and front-end development skills to the measles alert-threshold prototype and its presentation.",
@@ -298,6 +312,7 @@ const hackers = [
   {
     id: "manalebish-debalike-asfaw",
     name: "Manalebish Debalike Asfaw",
+    photo: "https://researchid.co/uploads/manalebish.webp",
     role: "Assistant Professor · Addis Ababa University",
     category: "Family 4 · Measles transmission",
     bio: "Manalebish Debalike Asfaw is an assistant professor at Addis Ababa University. She contributed mathematical and computational modelling skills to the measles transmission and elimination-pathways challenge.",
@@ -307,6 +322,7 @@ const hackers = [
   {
     id: "zerihun-mekoya-demissie",
     name: "Zerihun Mekoya Demissie",
+    photo: "https://www.haramaya.edu.et/cncs/wp-content/uploads/sites/8/bb-plugin/cache/Zerihun-Mekoya-square.jpg",
     role: "PhD Student in Mathematical Modelling · Haramaya University",
     category: "Family 4 · Measles transmission",
     bio: "Zerihun Mekoya Demissie is a PhD student in mathematical modelling and epidemiology at Haramaya University. He contributed dynamical modelling and computational analysis to the measles transmission family.",
@@ -326,6 +342,23 @@ function getInitials(name) {
     .toUpperCase();
 }
 
+function populateAvatar(avatar, person) {
+  avatar.replaceChildren();
+  avatar.textContent = getInitials(person.name);
+
+  if (!person.photo) return;
+
+  const photo = document.createElement("img");
+  photo.src = person.photo;
+  photo.alt = "";
+  photo.loading = "lazy";
+  photo.decoding = "async";
+  photo.referrerPolicy = "no-referrer";
+  if (person.photoPosition) photo.style.objectPosition = person.photoPosition;
+  photo.addEventListener("error", () => photo.remove(), { once: true });
+  avatar.append(photo);
+}
+
 function createPersonCard(person, type) {
   const button = document.createElement("button");
   button.type = "button";
@@ -337,7 +370,7 @@ function createPersonCard(person, type) {
   const avatar = document.createElement("span");
   avatar.className = "avatar";
   avatar.setAttribute("aria-hidden", "true");
-  avatar.textContent = getInitials(person.name);
+  populateAvatar(avatar, person);
 
   const name = document.createElement("h3");
   name.textContent = person.name;
@@ -365,8 +398,9 @@ const dialog = document.querySelector("#profile-dialog");
 function openProfile(person, type) {
   if (!dialog) return;
 
-  dialog.querySelector("[data-dialog-avatar]").textContent = getInitials(person.name);
-  dialog.querySelector("[data-dialog-avatar]").style.background = type === "organiser" ? "var(--green)" : "var(--nav)";
+  const avatar = dialog.querySelector("[data-dialog-avatar]");
+  avatar.style.background = type === "organiser" ? "var(--green)" : "var(--nav)";
+  populateAvatar(avatar, person);
   dialog.querySelector("[data-dialog-name]").textContent = person.name;
   dialog.querySelector("[data-dialog-role]").textContent = person.role;
   dialog.querySelector("[data-dialog-category]").textContent = person.category;
