@@ -1,8 +1,8 @@
-# Team 2: Antimalarial medicine forecasting and allocation
+# Family 2: Antimalarial medicine forecasting and allocation
 
 Branch: `family-antimalarial`
 
-Use this workspace for the team’s manuscript, approved forecasting code, allocation logic, data documentation, outputs, presentation and final prototype files.
+Use this workspace for the family’s manuscript, approved forecasting code, allocation logic, data documentation, prototype, dashboard if developed, outputs and presentation.
 
 ## Recommended folders
 
@@ -10,11 +10,13 @@ Use this workspace for the team’s manuscript, approved forecasting code, alloc
 - `code/` — cleaning, forecasting, validation and allocation scripts
 - `data/` — data dictionary, access instructions and approved public/de-identified data only
 - `documentation/` — methods, assumptions, limitations and user guidance
-- `outputs/` — forecasts, allocation tables, figures or application files
-- `slides/` — final team presentation
+- `prototype/` — runnable final prototype and setup instructions
+- `dashboard/` — dashboard source and deployment notes, if developed
+- `outputs/` — forecasts, allocation tables and figures
+- `slides/` — final family presentation
 
 ## README requirements
 
 Document the decision question, intended users, data sources, forecast horizon, model, validation approach, allocation rules, run order, outputs, limitations and next step.
 
-When complete, open a pull request to `hackathon-workspaces`.
+When the family package is complete, open a pull request to `hackathon-workspaces`.
