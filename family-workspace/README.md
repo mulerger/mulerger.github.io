@@ -1,8 +1,8 @@
-# Team 3: Measles alert rules
+# Family 3: Measles alert rules
 
 Branch: `family-measles-alert`
 
-Use this workspace for the team’s manuscript, approved surveillance-rule code, threshold analyses, data documentation, validation outputs, presentation and final prototype files.
+Use this workspace for the family’s manuscript, approved surveillance-rule code, threshold analyses, data documentation, prototype, dashboard if developed, validation outputs and presentation.
 
 ## Recommended folders
 
@@ -10,11 +10,13 @@ Use this workspace for the team’s manuscript, approved surveillance-rule code,
 - `code/` — cleaning, alert-rule, threshold and validation scripts
 - `data/` — data dictionary, access instructions and approved public/de-identified data only
 - `documentation/` — rule definitions, assumptions, limitations and user guidance
-- `outputs/` — alert summaries, figures, tables or application files
-- `slides/` — final team presentation
+- `prototype/` — runnable final prototype and setup instructions
+- `dashboard/` — dashboard source and deployment notes, if developed
+- `outputs/` — alert summaries, figures and tables
+- `slides/` — final family presentation
 
 ## README requirements
 
 Document the programme question, intended users, input data, alert definitions, threshold logic, validation, run order, outputs, interpretation, limitations and next step.
 
-When complete, open a pull request to `hackathon-workspaces`.
+When the family package is complete, open a pull request to `hackathon-workspaces`.
