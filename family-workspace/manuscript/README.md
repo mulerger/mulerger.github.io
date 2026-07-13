@@ -1,6 +1,6 @@
 # Manuscript-style report
 
-Place the final team report here using this structure:
+Place the final family report here using this structure:
 
 1. Background
 2. Methods
