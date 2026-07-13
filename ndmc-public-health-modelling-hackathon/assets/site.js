@@ -118,7 +118,7 @@ const organisers = [
   }
 ];
 
-const hackers = [
+const legacyHackers = [
   {
     id: "fentahun-bikale-kebede",
     name: "Fentahun Bikale Kebede",
@@ -225,19 +225,6 @@ const hackers = [
     links: []
   },
   {
-    id: "eyosias-wondwossen-teffera",
-    name: "Eyosias Wondwossen Teffera",
-    photo: "https://github.com/eyo25.png?size=320",
-    role: "AI Developer · BrainBite",
-    category: "Family 3 · Measles alerts",
-    bio: "Eyosias Wondwossen Teffera is an AI developer at BrainBite. He contributed software-development and prototyping skills to the measles outbreak alert-threshold family.",
-    skills: "Python · JavaScript",
-    links: [
-      ["LinkedIn", "https://www.linkedin.com/in/eyosias-teffera-35b1b9190"],
-      ["GitHub", "https://github.com/eyo25"]
-    ]
-  },
-  {
     id: "shimels-derso-kebede",
     name: "Shimels Derso Kebede",
     photo: "https://github.com/shimelsD.png?size=320",
@@ -301,15 +288,6 @@ const hackers = [
     links: [["LinkedIn", "https://www.linkedin.com/in/assefa-legesse-sisay-543160323/"]]
   },
   {
-    id: "lemma-demissie-regassa",
-    name: "Lemma Demissie Regassa",
-    role: "Data Analyst and Infectious Disease Modeller · CDHi, University of Gondar",
-    category: "Family 4 · Measles transmission",
-    bio: "Lemma Demissie Regassa is a data analyst and infectious disease modeller at CDHi, University of Gondar. He contributed modelling, analysis and interpretation to the measles transmission and elimination-pathways family.",
-    skills: "R · Python · Stata · MATLAB",
-    links: []
-  },
-  {
     id: "manalebish-debalike-asfaw",
     name: "Manalebish Debalike Asfaw",
     photo: "https://researchid.co/uploads/manalebish.webp",
@@ -330,6 +308,8 @@ const hackers = [
     links: []
   }
 ];
+
+const hackers = window.ndmcHackers || legacyHackers;
 
 function getInitials(name) {
   return name
