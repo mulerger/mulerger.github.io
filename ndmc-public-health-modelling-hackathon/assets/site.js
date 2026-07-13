@@ -20,7 +20,7 @@ const organisers = [
     photo: "assets/people/mesfin-diro.png",
     role: "Organiser, Facilitator & Technical Mentor",
     category: "Coordination and technical support",
-    bio: "Dr Mesfin Diro is a computational data scientist and Addis Ababa University faculty member specialising in machine learning, deep learning, modelling, high-performance computing and scientific-computing training. He supported overall coordination, mentoring and the collaborative Git/GitHub workflow used by the family teams.",
+    bio: "Dr Mesfin Diro is a computational data scientist and Addis Ababa University faculty member specialising in machine learning, deep learning, modelling, high-performance computing and scientific-computing training. He supported overall coordination, mentoring and the collaborative Git/GitHub workflow used by the challenge teams.",
     skills: "Facilitation · Technical mentorship · Machine learning · Git/GitHub",
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/mesfindiro"],
@@ -45,7 +45,7 @@ const organisers = [
     name: "Mandefro Legesse",
     role: "Participant Selection & Coordination",
     category: "Programme coordination",
-    bio: "Mandefro Legesse supported application screening, participant selection, participant coordination and access to the programme data and context needed by the family teams.",
+    bio: "Mandefro Legesse supported application screening, participant selection, participant coordination and access to the programme data and context needed by the challenge teams.",
     skills: "Participant coordination · Selection · Data support",
     links: []
   },
@@ -67,7 +67,7 @@ const organisers = [
     name: "Kassahun Abdisa",
     role: "Participant & Data Coordination",
     category: "Programme coordination",
-    bio: "Kassahun Abdisa supported participant coordination and helped connect family teams with the data, programme context and follow-up needed to progress their work.",
+    bio: "Kassahun Abdisa supported participant coordination and helped connect challenge teams with the data, programme context and follow-up needed to progress their work.",
     skills: "Participant coordination · Data support · Follow-up",
     links: []
   },
@@ -85,7 +85,7 @@ const organisers = [
     name: "Samson Warkaye",
     role: "Documentation & Resource Mobilisation",
     category: "Event delivery",
-    bio: "Samson Warkaye supported event documentation, resource mobilisation and coordination of the processes used to review and carry the family outputs forward.",
+    bio: "Samson Warkaye supported event documentation, resource mobilisation and coordination of the processes used to review and carry the team outputs forward.",
     skills: "Documentation · Resource mobilisation · Coordination",
     links: []
   },
@@ -94,7 +94,7 @@ const organisers = [
     name: "Fitsum Bekele",
     role: "Organising Committee",
     category: "Event delivery",
-    bio: "Fitsum Bekele contributed to resource mobilisation, event organisation and the review processes supporting the family presentations and outputs.",
+    bio: "Fitsum Bekele contributed to resource mobilisation, event organisation and the review processes supporting the team presentations and outputs.",
     skills: "Event organisation · Resource mobilisation · Output review",
     links: []
   },
@@ -112,7 +112,7 @@ const organisers = [
     name: "Chalie Mulu",
     role: "Data Support",
     category: "Technical support",
-    bio: "Chalie Mulu supported the provision and interpretation of programme data used by the family teams during prototype development.",
+    bio: "Chalie Mulu supported the provision and interpretation of programme data used by the challenge teams during prototype development.",
     skills: "Data support · Programme context",
     links: []
   }
@@ -132,7 +132,7 @@ function getInitials(name) {
 }
 
 function getFamily(person) {
-  const match = person.category?.match(/Family\s+(\d)/i);
+  const match = person.category?.match(/(?:Team|Family)\s+(\d)/i);
   return match ? `family-${match[1]}` : "";
 }
 
