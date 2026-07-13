@@ -194,45 +194,6 @@ document.querySelectorAll("[data-people-grid]").forEach(grid => {
   people.forEach(person => grid.append(createPersonCard(person, type === "organisers" ? "organiser" : "hacker")));
 });
 
-const filterButtons = [...document.querySelectorAll("[data-directory-filter]")];
-const searchInput = document.querySelector("[data-directory-search]");
-const resultCount = document.querySelector("[data-directory-count]");
-const emptyResults = document.querySelector("[data-empty-results]");
-let activeFilter = "all";
-
-function applyDirectoryFilters() {
-  const query = searchInput?.value.trim().toLowerCase() || "";
-  const cards = [...document.querySelectorAll("[data-person-id]")];
-  let visible = 0;
-
-  cards.forEach(card => {
-    const typeMatches = activeFilter === "all"
-      || (activeFilter === "organisers" && card.dataset.personType === "organiser")
-      || card.dataset.family === activeFilter;
-    const queryMatches = !query || card.dataset.search.includes(query);
-    card.hidden = !(typeMatches && queryMatches);
-    if (!card.hidden) visible += 1;
-  });
-
-  document.querySelectorAll("[data-people-section]").forEach(section => {
-    section.hidden = !section.querySelector("[data-person-id]:not([hidden])");
-  });
-
-  if (resultCount) resultCount.textContent = `${visible} ${visible === 1 ? "person" : "people"}`;
-  if (emptyResults) emptyResults.hidden = visible !== 0;
-}
-
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.directoryFilter;
-    filterButtons.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
-    applyDirectoryFilters();
-  });
-});
-
-searchInput?.addEventListener("input", applyDirectoryFilters);
-if (filterButtons.length || searchInput) applyDirectoryFilters();
-
 const dialog = document.querySelector("#profile-dialog");
 let lastProfileTrigger = null;
 
@@ -330,16 +291,3 @@ if (navToggle && primaryNav) {
     if (event.key === "Escape") closeNavigation();
   });
 }
-
-const backToTop = document.createElement("button");
-backToTop.type = "button";
-backToTop.className = "back-to-top";
-backToTop.setAttribute("aria-label", "Back to top");
-backToTop.textContent = "↑";
-document.body.append(backToTop);
-
-window.addEventListener("scroll", () => {
-  backToTop.classList.toggle("visible", window.scrollY > 700);
-}, { passive: true });
-
-backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
