@@ -193,7 +193,6 @@ button, input { font: inherit; }
   text-align: center;
 }
 
-.event-eyebrow,
 .section-kicker {
   margin: 0 0 12px;
   color: var(--brand-green);
@@ -204,12 +203,12 @@ button, input { font: inherit; }
 }
 
 .event-hero h1 {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto 14px;
   color: #222f37;
-  font-size: clamp(2.25rem, 5.6vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
 }
 
 .event-hero .tagline {
@@ -274,14 +273,6 @@ button, input { font: inherit; }
   line-height: 1.25;
 }
 
-.institution-copy small {
-  display: block;
-  margin-top: 5px;
-  color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
 .lead-intro {
   max-width: 920px;
   margin: 36px auto 0;
@@ -289,23 +280,6 @@ button, input { font: inherit; }
   font-size: 1.08rem;
   text-align: center;
 }
-
-.facts-strip {
-  margin: 38px 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.fact {
-  padding: 22px 14px;
-  text-align: center;
-}
-
-.fact + .fact { border-left: 1px solid var(--line); }
-.fact strong { display: block; color: var(--brand-blue-dark); font-size: 1.72rem; line-height: 1; }
-.fact span { display: block; margin-top: 7px; color: var(--muted); font-size: 0.79rem; font-weight: 680; letter-spacing: 0.04em; text-transform: uppercase; }
 
 .editorial-section {
   margin-top: 58px;
@@ -394,30 +368,6 @@ button, input { font: inherit; }
 .card-link { display: inline-flex; margin-top: 19px; font-size: 0.87rem; font-weight: 760; text-decoration: none; }
 .card-link::after { content: "→"; margin-left: 7px; transition: transform 0.15s ease; }
 .card-link:hover::after { transform: translateX(3px); }
-
-.journey {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.journey li {
-  position: relative;
-  padding: 20px 16px 18px;
-  color: var(--text);
-  background: var(--soft);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-}
-
-.journey li:first-child { border-left: 1px solid var(--line); border-radius: 8px 0 0 8px; }
-.journey li:last-child { border-right: 1px solid var(--line); border-radius: 0 8px 8px 0; }
-.journey li + li { border-left: 1px solid var(--line); }
-.journey strong { display: block; margin-bottom: 3px; color: var(--ink); font-size: 0.93rem; }
-.journey span { font-size: 0.8rem; }
 
 .cta-panel {
   margin-top: 54px;
@@ -613,7 +563,7 @@ button, input { font: inherit; }
 .avatar {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 4.2;
+  aspect-ratio: 1;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -789,54 +739,11 @@ button, input { font: inherit; }
 .resource-grid,
 .output-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.submission-card {
-  margin-bottom: 28px;
-  padding: 29px;
-  background: var(--blue-soft);
-  border: 1px solid #cfe4f1;
-  border-top: 5px solid var(--brand-green-bright);
-  border-radius: 9px;
-}
-
-.submission-card h2 {
-  margin: 0 0 8px;
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
-  line-height: 1.25;
-}
-
-.submission-card > p:not(.section-kicker) { margin: 0; color: var(--text); }
-
-.submission-structure {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 23px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.submission-structure li {
-  display: grid;
-  grid-template-columns: minmax(118px, 0.38fr) minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
-  padding: 14px;
-  background: #fff;
-  border: 1px solid #d4e5ee;
-  border-radius: 7px;
-}
-
-.submission-structure code {
-  color: var(--brand-blue-dark);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.submission-structure span { color: var(--text); font-size: 0.82rem; line-height: 1.45; }
+.resource-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.output-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .resource-card,
 .output-card {
@@ -893,7 +800,6 @@ button, input { font: inherit; }
 .footer-lockup { display: flex; align-items: center; gap: 14px; }
 .footer-lockup img { width: 58px; height: 58px; object-fit: contain; background: #fff; border-radius: 50%; }
 .footer-lockup strong { display: block; color: #fff; font-size: 0.9rem; }
-.footer-lockup span { display: block; color: #c8d4da; }
 .footer-meta { color: #c8d4da; }
 .footer-links { display: flex; gap: 15px; }
 .footer-links a { color: #fff; }
@@ -965,16 +871,8 @@ button, input { font: inherit; }
   .institution-band { flex-direction: column; gap: 15px; padding-block: 24px; }
   .institution-band img { width: 98px; height: 98px; }
   .institution-copy { padding: 15px 0 0; text-align: center; border-top: 1px solid var(--line); border-left: 0; }
-  .facts-strip { grid-template-columns: repeat(2, 1fr); }
-  .fact:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-  .fact:nth-child(4) { border-top: 1px solid var(--line); }
   .section-heading { align-items: start; flex-direction: column; gap: 10px; }
-  .challenge-grid, .resource-grid, .output-grid, .submission-structure { grid-template-columns: 1fr; }
-  .journey { grid-template-columns: 1fr; }
-  .journey li, .journey li:first-child, .journey li:last-child { border: 1px solid var(--line); border-radius: 0; }
-  .journey li:first-child { border-radius: 8px 8px 0 0; }
-  .journey li:last-child { border-radius: 0 0 8px 8px; }
-  .journey li + li { border-top: 0; }
+  .challenge-grid, .resource-grid, .output-grid { grid-template-columns: 1fr; }
   .cta-panel { align-items: flex-start; flex-direction: column; }
   .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .directory-summary { grid-template-columns: 1fr; }
@@ -1005,7 +903,6 @@ button, input { font: inherit; }
   .dialog-profile-head { grid-template-columns: 76px 1fr; gap: 14px; padding-right: 6px; }
   .dialog-profile-head .avatar { width: 76px; }
   .family-panel { padding: 23px 20px; }
-  .submission-structure li { grid-template-columns: 1fr; gap: 4px; }
   .presentation-item { grid-template-columns: 1fr; }
   .presentation-item .availability { grid-column: auto; }
 }
