@@ -18,103 +18,40 @@ const organisers = [
     id: "mesfin-diro",
     name: "Dr Mesfin Diro",
     photo: "assets/people/mesfin-diro.png",
-    role: "Organiser, Facilitator & Technical Mentor",
-    category: "Coordination and technical support",
-    bio: "Dr Mesfin Diro is a computational data scientist and Addis Ababa University faculty member specialising in machine learning, deep learning, modelling, high-performance computing and scientific-computing training. He supported overall coordination, mentoring and the collaborative Git/GitHub workflow used by the hackathon families.",
-    skills: "Facilitation · Technical mentorship · Machine learning · Git/GitHub",
+    role: "Technical Facilitator · Git and GitHub",
+    category: "Technical facilitation",
+    bio: "Dr Mesfin Diro is a computational data scientist and Addis Ababa University faculty member specialising in machine learning, deep learning, modelling, high-performance computing and scientific-computing training. He delivered the Git and GitHub sessions and supported the families' collaborative development workflow.",
+    skills: "Technical facilitation · Git and GitHub · Machine learning · Scientific computing",
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/mesfindiro"],
       ["GitHub", "https://github.com/mesfind"]
     ]
   },
   {
-    id: "dawit-melese",
-    name: "Dr Dawit Melese",
-    photo: "assets/people/dawit-melese.jpg",
-    role: "Organiser & Modelling Facilitator",
-    category: "Technical support",
-    bio: "Dr Dawit Melese is a public-health modeller whose work includes malaria network modelling and intervention analysis. He supported participant selection and helped families strengthen their modelling approaches, interpretation and prototype development.",
-    skills: "Public-health modelling · Technical mentorship · Prototype review",
-    links: [
-      ["LinkedIn", "https://www.linkedin.com/in/dawit-melese-phd-27b779137/"],
-      ["GitHub", "https://github.com/dawitmeleseg"]
-    ]
-  },
-  {
-    id: "mandefro-legesse",
-    name: "Mandefro Legesse",
-    role: "Participant Selection & Coordination",
-    category: "Programme coordination",
-    bio: "Mandefro Legesse supported application screening, participant selection, participant coordination and access to the programme data and context needed by the hackathon families.",
-    skills: "Participant coordination · Selection · Data support",
-    links: []
-  },
-  {
     id: "leykun-getaneh",
     name: "Leykun Getaneh",
     photo: "assets/people/leykun-getaneh.png",
-    role: "Git/GitHub Lead & Technical Mentor",
-    category: "Collaborative development",
-    bio: "Leykun Getaneh is a data scientist, statistician and lecturer working on disease modelling, forecasting and decision-support tools. He led practical Git and GitHub support and contributed technical mentorship, data provision and review throughout the hackathon.",
-    skills: "Git/GitHub · Data science · Disease modelling · Forecasting",
+    role: "Technical Facilitator",
+    category: "Technical facilitation",
+    bio: "Leykun Getaneh is a data scientist, statistician and lecturer working on disease modelling, forecasting and decision-support tools. He provided technical facilitation, data support and review throughout the hackathon.",
+    skills: "Technical facilitation · Data science · Disease modelling · Forecasting",
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/leykun-getaneh-gebeye-39a17890"],
       ["GitHub", "https://github.com/leykunget"]
     ]
   },
   {
-    id: "kassahun-abdisa",
-    name: "Kassahun Abdisa",
-    role: "Participant & Data Coordination",
-    category: "Programme coordination",
-    bio: "Kassahun Abdisa supported participant coordination and helped connect families with the data, programme context and follow-up needed to progress their work.",
-    skills: "Participant coordination · Data support · Follow-up",
-    links: []
-  },
-  {
-    id: "anwar-taju",
-    name: "Anwar Taju",
-    role: "Logistics & Documentation",
-    category: "Event delivery",
-    bio: "Anwar Taju is a technical contributor with the NDMC Data Analytics, Modelling and Visualization unit. He contributed to application screening, event documentation and logistical coordination across the six-day programme.",
-    skills: "Logistics · Documentation · Technical support",
-    links: [["GitHub", "https://github.com/AnwarTaju"]]
-  },
-  {
-    id: "samson-warkaye",
-    name: "Samson Warkaye",
-    role: "Documentation & Resource Mobilisation",
-    category: "Event delivery",
-    bio: "Samson Warkaye supported event documentation, resource mobilisation and coordination of the processes used to review and carry the family outputs forward.",
-    skills: "Documentation · Resource mobilisation · Coordination",
-    links: []
-  },
-  {
-    id: "fitsum-bekele",
-    name: "Fitsum Bekele",
-    role: "Organising Committee",
-    category: "Event delivery",
-    bio: "Fitsum Bekele contributed to resource mobilisation, event organisation and the review processes supporting the family presentations and outputs.",
-    skills: "Event organisation · Resource mobilisation · Output review",
-    links: []
-  },
-  {
-    id: "fikreyohannes-shewangizaw",
-    name: "Fikreyohannes Fikereyohans Shewangizaw",
-    role: "Logistics Coordinator",
-    category: "Event delivery",
-    bio: "Fikreyohannes Fikereyohans Shewangizaw supported on-site logistics and practical coordination across the hackathon programme.",
-    skills: "Logistics · On-site coordination",
-    links: []
-  },
-  {
-    id: "chalie-mulu",
-    name: "Chalie Mulu",
-    role: "Data Support",
-    category: "Technical support",
-    bio: "Chalie Mulu supported the provision and interpretation of programme data used by the hackathon families during prototype development.",
-    skills: "Data support · Programme context",
-    links: []
+    id: "dawit-melese",
+    name: "Dr Dawit Melese",
+    photo: "assets/people/dawit-melese.jpg",
+    role: "Modelling Facilitator",
+    category: "Technical facilitation",
+    bio: "Dr Dawit Melese is a public-health modeller whose work includes malaria network modelling and intervention analysis. He helped families strengthen their modelling approaches, interpretation and prototype development.",
+    skills: "Public-health modelling · Technical mentorship · Prototype review",
+    links: [
+      ["LinkedIn", "https://www.linkedin.com/in/dawit-melese-phd-27b779137/"],
+      ["GitHub", "https://github.com/dawitmeleseg"]
+    ]
   }
 ];
 

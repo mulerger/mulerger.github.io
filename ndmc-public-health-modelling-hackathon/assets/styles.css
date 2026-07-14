@@ -1,13 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap");
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/source-sans-pro/source-sans-pro-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/source-sans-pro/source-sans-pro-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("fonts/source-sans-pro/source-sans-pro-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("fonts/source-sans-pro/source-sans-pro-semibolditalic.woff") format("woff");
+}
 
 :root {
   --brand-blue: #176fa8;
   --brand-blue-dark: #12577f;
-  --brand-green: #2f8a55;
+  --brand-green: #28784a;
   --nav: #4a5864;
   --ink: #343a40;
   --text: #4f5961;
-  --muted: #6c757d;
+  --muted: #5f6971;
   --line: #dee2e6;
   --line-strong: #c7ced3;
   --soft: #f5f7f8;
@@ -31,7 +61,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Source Sans 3", "Source Sans Pro", "Segoe UI", Arial, sans-serif;
+  font-family: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
@@ -338,6 +368,38 @@ input {
   gap: 24px;
 }
 
+.coordination-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.coordination-list li {
+  padding: 14px 16px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.coordination-list li:nth-child(odd) {
+  margin-right: 22px;
+}
+
+.coordination-list strong {
+  font-weight: 600;
+}
+
+.coordination-list span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
 .person-card {
   width: 100%;
   min-width: 0;
@@ -560,6 +622,90 @@ input {
   font-size: 1.13rem;
 }
 
+.resource-links {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.resource-links li {
+  margin-bottom: 12px;
+  padding-left: 3px;
+}
+
+.topic-index {
+  margin: 0 0 55px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-index ol {
+  margin: 0;
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px 42px;
+}
+
+.topic-brief {
+  margin-top: 62px;
+  scroll-margin-top: 90px;
+}
+
+.topic-brief + .topic-brief {
+  padding-top: 58px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.topic-brief h2 {
+  margin: 0 0 7px;
+  color: #30363a;
+  font-size: clamp(1.65rem, 2.8vw, 2rem);
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.topic-brief h3 {
+  margin: 29px 0 8px;
+  color: #30363a;
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.topic-brief p,
+.topic-brief li {
+  max-width: 1000px;
+}
+
+.topic-brief li {
+  margin-bottom: 7px;
+}
+
+.topic-subtitle {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+
+.topic-columns {
+  margin-top: 4px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 54px;
+}
+
+.topic-columns ol,
+.topic-columns ul {
+  margin-top: 0;
+  padding-left: 22px;
+}
+
+.topic-scope {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
 .family-details {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -639,11 +785,6 @@ input {
 .agenda-table td:first-child {
   width: 145px;
   white-space: nowrap;
-}
-
-.agenda-table th:last-child,
-.agenda-table td:last-child {
-  width: 250px;
 }
 
 .agenda-table .break-row td {
@@ -827,6 +968,16 @@ input {
     gap: 18px;
   }
 
+  .coordination-list,
+  .topic-index ol,
+  .topic-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .coordination-list li:nth-child(odd) {
+    margin-right: 0;
+  }
+
   .avatar {
     height: 250px;
   }
@@ -859,9 +1010,7 @@ input {
 
   .agenda-table td,
   .agenda-table th:first-child,
-  .agenda-table td:first-child,
-  .agenda-table th:last-child,
-  .agenda-table td:last-child {
+  .agenda-table td:first-child {
     width: 100%;
     padding: 2px 0;
     border: 0;
@@ -872,17 +1021,6 @@ input {
     color: var(--brand-green);
     font-size: 0.86rem;
     font-weight: 700;
-  }
-
-  .agenda-table td:last-child:not(:empty) {
-    margin-top: 3px;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-
-  .agenda-table td:last-child:not(:empty)::before {
-    content: "Presenter: ";
-    font-weight: 600;
   }
 
   .agenda-table .break-row td {
