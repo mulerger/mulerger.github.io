@@ -131,9 +131,9 @@ const decisionMakers = [
     name: "Mulat Nigus Alemu",
     photo: "assets/people/mulat-nigus-alemu.jpg",
     photoPosition: "center 15%",
-    role: "National Senior Advisor for Immunization, Measles & Immunization/Health Systems · Ministry of Health",
+    role: "National Senior Immunization Advisor · Ministry of Health",
     category: "Decision-maker",
-    bio: "Mulat Nigus Alemu is a National Senior Advisor for Immunization, Measles, and Immunization/Health Systems at the Ministry of Health in Ethiopia. A Pasteur Institute/ADVAC-trained vaccinologist with over 18 years of experience at subnational and national levels, he specializes in designing national immunization strategies, advancing a life-course approach to vaccination, and strengthening health systems to achieve universal immunization and vaccination equity. Supported by an MPH from the University of Gondar and a Diploma in Vaccinology, Mulat excels at integrating advanced vaccinology standards with the national immunization program and public health frameworks. He is dedicated to driving data-driven policies and building resilient, sustainable immunization and health systems that safeguard populations in general, and vulnerable populations in particular.",
+    bio: "Mulat Nigus Alemu is a National Senior Immunization Advisor at the Ministry of Health in Ethiopia. A Pasteur Institute/ADVAC-trained vaccinologist with over 18 years of experience at subnational and national levels, he specializes in designing national immunization strategies, advancing a life-course approach to vaccination, and strengthening health systems to achieve universal immunization and vaccination equity. Supported by an MPH from the University of Gondar and a Diploma in Vaccinology, Mulat excels at integrating advanced vaccinology standards with the national immunization program and public health frameworks. He is dedicated to driving data-driven policies and building resilient, sustainable immunization and health systems that safeguard populations in general, and vulnerable populations in particular.",
     skills: "Immunization programmes · National EPI · Measles · Coverage and equity",
     links: [
       ["Research profile", "https://openalex.org/A5034861484"],
