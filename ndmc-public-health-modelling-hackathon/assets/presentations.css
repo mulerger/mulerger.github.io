@@ -479,6 +479,17 @@ body {
   border-radius: 2px;
 }
 
+.photo-frame--portrait img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 410px;
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 .photo-frame figcaption {
   margin-top: 9px;
   color: var(--deck-muted);
