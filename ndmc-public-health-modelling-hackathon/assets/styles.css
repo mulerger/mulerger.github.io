@@ -368,6 +368,14 @@ input {
   gap: 24px;
 }
 
+@media (min-width: 1121px) {
+  [data-people-grid="staff"] > .person-card:last-child:nth-child(4n + 1) {
+    width: calc((100% - 24px) / 2);
+    grid-column: 2 / span 2;
+    justify-self: center;
+  }
+}
+
 .person-card {
   width: 100%;
   min-width: 0;
@@ -851,6 +859,12 @@ input {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  [data-people-grid="staff"] > .person-card:last-child:nth-child(2n + 1) {
+    width: calc((100% - 24px) / 2);
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+
   .avatar {
     height: 300px;
   }
@@ -944,6 +958,10 @@ input {
     gap: 18px;
   }
 
+  [data-people-grid="staff"] > .person-card:last-child:nth-child(2n + 1) {
+    width: calc((100% - 18px) / 2);
+  }
+
   .topic-index ol,
   .topic-columns {
     grid-template-columns: 1fr;
@@ -1017,6 +1035,11 @@ input {
 
   .people-grid {
     grid-template-columns: 1fr;
+  }
+
+  [data-people-grid="staff"] > .person-card:last-child:nth-child(2n + 1) {
+    width: 100%;
+    grid-column: auto;
   }
 
   .avatar {
