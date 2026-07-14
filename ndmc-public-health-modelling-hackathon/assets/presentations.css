@@ -133,10 +133,11 @@ body {
   position: absolute;
   top: 28px;
   right: 76px;
-  width: 70px;
-  height: 70px;
+  width: 230px;
+  height: auto;
+  max-height: 94px;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: 4px;
   background: #fff;
 }
 
