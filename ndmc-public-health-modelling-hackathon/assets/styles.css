@@ -368,38 +368,6 @@ input {
   gap: 24px;
 }
 
-.coordination-list {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-
-.coordination-list li {
-  padding: 14px 16px 14px 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 18px;
-  border-bottom: 1px solid var(--line);
-}
-
-.coordination-list li:nth-child(odd) {
-  margin-right: 22px;
-}
-
-.coordination-list strong {
-  font-weight: 600;
-}
-
-.coordination-list span {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: right;
-}
-
 .person-card {
   width: 100%;
   min-width: 0;
@@ -449,6 +417,10 @@ input {
 
 .person-card.organiser .avatar {
   background: var(--brand-green);
+}
+
+.person-card.coordination .avatar {
+  background: var(--brand-blue-dark);
 }
 
 .person-card-copy {
@@ -968,14 +940,9 @@ input {
     gap: 18px;
   }
 
-  .coordination-list,
   .topic-index ol,
   .topic-columns {
     grid-template-columns: 1fr;
-  }
-
-  .coordination-list li:nth-child(odd) {
-    margin-right: 0;
   }
 
   .avatar {
