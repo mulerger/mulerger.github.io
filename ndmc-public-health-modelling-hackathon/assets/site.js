@@ -4,10 +4,10 @@ const organisers = [
     name: "Mulugeta Geremew Geleso",
     photo: "assets/people/mulugeta-geremew-geleso.jpg",
     role: "Lead Organiser & Lead Facilitator · NDMC, EPHI",
-    category: "Hackathon leadership",
+    category: "Organising and facilitation",
     lead: true,
     bio: "Mulugeta Geremew Geleso is a mathematical and statistical modeller working at the intersection of public-health analytics, disease modelling, geospatial intelligence, forecasting and data-to-policy translation. He leads the Data Analytics, Modelling and Visualization Division at NDMC, EPHI, and led the design, coordination and facilitation of this hackathon.",
-    skills: "Public-health modelling · Analytics leadership · Evidence translation · Facilitation",
+    skills: "Public-health modelling · Analytics and modelling · Evidence translation · Facilitation",
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/mulugeta-geremew-0485729a/"],
       ["GitHub", "https://github.com/mulerger"],
@@ -39,18 +39,88 @@ const organisers = [
       ["LinkedIn", "https://www.linkedin.com/in/leykun-getaneh-gebeye-39a17890"],
       ["GitHub", "https://github.com/leykunget"]
     ]
-  },
+  }
+];
+
+const programmeCoordination = [
   {
     id: "dawit-melese",
     name: "Dr Dawit Melese",
     photo: "assets/people/dawit-melese.jpg",
-    role: "Modelling Facilitator",
-    category: "Technical facilitation",
-    bio: "Dr Dawit Melese is a public-health modeller whose work includes malaria network modelling and intervention analysis. He helped families strengthen their modelling approaches, interpretation and prototype development.",
-    skills: "Public-health modelling · Technical mentorship · Prototype review",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Dr Dawit Melese is a public-health modeller whose work includes malaria network modelling and intervention analysis. He contributed to programme coordination, participant selection, technical review and support to the hackathon families.",
+    skills: "Programme coordination · Public-health modelling · Technical review",
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/dawit-melese-phd-27b779137/"],
       ["GitHub", "https://github.com/dawitmeleseg"]
+    ]
+  },
+  {
+    id: "anwar-taju-habib",
+    name: "Anwar Taju Habib",
+    photo: "assets/people/anwar-taju-habib.jpg",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Anwar Taju Habib is a data analyst and health-data specialist at NDMC, EPHI. He contributed to application screening, event documentation and logistical coordination across the six-day programme.",
+    skills: "Programme coordination · Data analysis · Documentation · Logistics",
+    links: [
+      ["NDMC profile", "https://ndmc.ephi.gov.et/profile/anwar-taju/"],
+      ["LinkedIn", "https://www.linkedin.com/in/anwar-taju-7585881ab/"],
+      ["GitHub", "https://github.com/AnwarTaju"]
+    ]
+  },
+  {
+    id: "samson-warkaye-lamma",
+    name: "Samson Warkaye Lamma",
+    photo: "assets/people/samson-warkaye-lamma.jpg",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Samson Warkaye Lamma is a GIS expert at NDMC, EPHI, specialising in spatial-data integration, analysis and mapping. He supported event documentation, resource mobilisation and coordination of the family outputs.",
+    skills: "Programme coordination · GIS · Spatial analysis · Documentation",
+    links: [
+      ["NDMC profile", "https://ndmc.ephi.gov.et/profile/samson-warkaye-lamma/"],
+      ["LinkedIn", "https://www.linkedin.com/in/samson-warkaye-0852a698/"]
+    ]
+  },
+  {
+    id: "fitsum-bekele-endeshaw",
+    name: "Fitsum Bekele Endeshaw",
+    photo: "assets/people/fitsum-bekele-endeshaw.jpg",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Fitsum Bekele Endeshaw is a climate and health data analyst at NDMC, EPHI. He contributed to resource mobilisation, event organisation and the review processes supporting the family presentations and outputs.",
+    skills: "Programme coordination · Climate and health analytics · Event organisation",
+    links: [
+      ["NDMC profile", "https://ndmc.ephi.gov.et/profile/fitsum-bekele-endeshaw/"],
+      ["LinkedIn", "https://www.linkedin.com/in/fitsum-bekele-endeshaw-145288179/"]
+    ]
+  },
+  {
+    id: "fikreyohannes-shewangizaw",
+    name: "Fikreyohannes Shewangizaw",
+    photo: "assets/people/fikreyohannes-shewangizaw.jpg",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Fikreyohannes Shewangizaw is a senior web application developer at NDMC, EPHI. He supported on-site logistics and practical coordination across the hackathon programme.",
+    skills: "Programme coordination · Web development · On-site logistics",
+    links: [
+      ["NDMC profile", "https://ndmc.ephi.gov.et/profile/fikreyohannes-shewangizaw/"],
+      ["LinkedIn", "https://www.linkedin.com/in/fikreyohans-shewangizaw-a61a60188/"]
+    ]
+  },
+  {
+    id: "chalie-mulu-belete",
+    name: "Chalie Mulu Belete",
+    photo: "assets/people/chalie-mulu-belete.jpg",
+    photoPosition: "center 20%",
+    role: "Programme Coordination · NDMC, EPHI",
+    category: "Programme coordination",
+    bio: "Chalie Mulu Belete is a geospatial epidemiologist at NDMC, EPHI, working on spatial-data integration, mapping and public-health analysis. He supported the provision and interpretation of programme data used by the hackathon families.",
+    skills: "Programme coordination · Geospatial epidemiology · GIS · Data support",
+    links: [
+      ["NDMC profile", "https://ndmc.ephi.gov.et/profile/chalie-mulu-belete/"],
+      ["LinkedIn", "https://www.linkedin.com/in/chaliembelete8264/"]
     ]
   }
 ];
@@ -93,7 +163,8 @@ function populateAvatar(avatar, person) {
 function createPersonCard(person, type) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = `person-card ${type === "organiser" ? "organiser" : ""} ${person.lead ? "lead-card" : ""}`.trim();
+  const typeClass = type === "organiser" ? "organiser" : type === "coordination" ? "coordination" : "";
+  button.className = `person-card ${typeClass} ${person.lead ? "lead-card" : ""}`.trim();
   button.dataset.personId = person.id;
   button.dataset.personType = type;
   button.dataset.family = getFamily(person);
@@ -127,8 +198,13 @@ function createPersonCard(person, type) {
 
 document.querySelectorAll("[data-people-grid]").forEach(grid => {
   const type = grid.dataset.peopleGrid;
-  const people = type === "organisers" ? organisers : hackers;
-  people.forEach(person => grid.append(createPersonCard(person, type === "organisers" ? "organiser" : "hacker")));
+  const people = type === "organisers"
+    ? organisers
+    : type === "coordination"
+      ? programmeCoordination
+      : hackers;
+  const personType = type === "organisers" ? "organiser" : type === "coordination" ? "coordination" : "hacker";
+  people.forEach(person => grid.append(createPersonCard(person, personType)));
 });
 
 const dialog = document.querySelector("#profile-dialog");
@@ -137,6 +213,8 @@ let lastProfileTrigger = null;
 function findPerson(id) {
   const organiser = organisers.find(person => person.id === id);
   if (organiser) return { person: organiser, type: "organiser" };
+  const coordination = programmeCoordination.find(person => person.id === id);
+  if (coordination) return { person: coordination, type: "coordination" };
   const hacker = hackers.find(person => person.id === id);
   return hacker ? { person: hacker, type: "hacker" } : null;
 }
@@ -145,7 +223,11 @@ function openProfile(person, type, updateHash = true) {
   if (!dialog) return;
 
   const avatar = dialog.querySelector("[data-dialog-avatar]");
-  avatar.style.background = type === "organiser" ? "var(--brand-green)" : "var(--nav)";
+  avatar.style.background = type === "organiser"
+    ? "var(--brand-green)"
+    : type === "coordination"
+      ? "var(--brand-blue-dark)"
+      : "var(--nav)";
   populateAvatar(avatar, person);
   dialog.querySelector("[data-dialog-name]").textContent = person.name;
   dialog.querySelector("[data-dialog-role]").textContent = person.role;

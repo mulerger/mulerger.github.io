@@ -235,7 +235,7 @@ window.ndmcHackers = [
     photoPosition: "center top",
     role: "Lecturer and Library Executive Director · Woldia University",
     category: "Family 4 · Measles transmission strategies",
-    bio: "Selam Nigusie Mitku is a mathematics lecturer and researcher at Woldia University, where she also serves as Library Executive Director. She holds a master’s degree in Mathematical and Statistical Modelling from Hawassa University. Her work focuses on hybrid mathematical–AI models for public health, epidemiological transmission dynamics and socioeconomic forecasting. She combines Python, R and LaTeX to address complex problems through data-driven research and collaborative academic leadership.",
+    bio: "Selam Nigusie Mitku is a mathematics lecturer and researcher at Woldia University, where she also serves as Library Executive Director. She holds a master’s degree in Mathematical and Statistical Modelling from Hawassa University. Her work focuses on hybrid mathematical–AI models for public health, epidemiological transmission dynamics and socioeconomic forecasting. She combines Python, R and LaTeX to address complex problems through data-driven research and collaborative academic work.",
     skills: "Mathematical and statistical modelling · Epidemiological transmission dynamics · Hybrid mathematical–AI models · Python · R · LaTeX",
     links: [
       ["LinkedIn", "https://et.linkedin.com/in/selam-nigusie-3b72a7373"],
