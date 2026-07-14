@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web presentation: practical Git and GitHub guide for NDMC hackathon families.">
+  <link rel="icon" type="image/jpeg" href="../assets/ephi-logo-2024.jpg">
+  <link rel="stylesheet" href="../assets/vendor/reveal/reveal.css">
+  <link rel="stylesheet" href="../assets/presentations.css">
+  <title>Git and GitHub Quick Guide | NDMC Hackathon 2026</title>
+</head>
+<body>
+  <a class="deck-back" href="../presentations.html">← Presentations</a>
+
+  <div class="reveal">
+    <div class="slides">
+      <section class="title-slide">
+        <img class="deck-logo" src="../assets/ephi-logo-2024.jpg" width="1590" height="1590" alt="Ethiopian Public Health Institute">
+        <p class="deck-kicker">Technical refresher</p>
+        <h1>Git and GitHub</h1>
+        <p class="deck-subtitle">A practical workflow for collaborative analysis, documentation and prototypes</p>
+        <p class="deck-presenter">Dr Mesfin Diro · Technical Facilitator</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">The difference</p>
+        <h2>Git records the work; GitHub connects the family</h2>
+        <div class="two-column">
+          <div class="rule-block">
+            <h3>Git</h3>
+            <p>Version-control software on your computer. It records who changed what, when and why.</p>
+          </div>
+          <div class="rule-block">
+            <h3>GitHub</h3>
+            <p>The shared online repository for branches, issues, pull requests, review and published project history.</p>
+          </div>
+        </div>
+        <p class="note">A commit is a meaningful snapshot—not a copy named “final-final-new”.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">First setup</p>
+        <h2>Identify yourself and clone the family repository</h2>
+        <pre class="code-line">git config --global user.name "Your Name"
+git config --global user.email "you@example.org"
+git clone &lt;family-repository-url&gt;
+cd &lt;family-repository&gt;</pre>
+        <p class="note">Use the name and email linked to your GitHub account so your contributions are recorded correctly.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Daily workflow</p>
+        <h2>Pull, branch, edit, commit and push</h2>
+        <pre class="code-line">git pull
+git switch -c analysis/short-task-name
+
+# edit and check your files
+git add path/to/file
+git commit -m "Explain the change"
+git push -u origin analysis/short-task-name</pre>
+        <p class="note">Create a focused branch for one task. Pull before starting so you build on the latest shared work.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Repository structure</p>
+        <h2>Keep every output in a predictable place</h2>
+        <div class="folder-list">
+          <div><code>manuscript/</code><p>Manuscript-style report</p></div>
+          <div><code>code/</code><p>Preparation, modelling and validation scripts</p></div>
+          <div><code>data/</code><p>Dictionary, access notes and approved shareable data</p></div>
+          <div><code>documentation/</code><p>Methods, assumptions and guidance</p></div>
+          <div><code>prototype/</code><p>Dashboard or working application</p></div>
+          <div><code>outputs/</code><p>Tables, maps and figures</p></div>
+          <div><code>slides/</code><p>Final family presentation</p></div>
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Pull requests</p>
+        <h2>Review before merging</h2>
+        <div class="flow">
+          <div><h3>Open</h3><p>State the task, what changed and how the result was checked.</p></div>
+          <div><h3>Review</h3><p>Read the code and output; ask questions on the relevant lines.</p></div>
+          <div><h3>Merge</h3><p>Resolve comments, confirm checks and merge the completed work.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Good collaboration</p>
+        <h2>Make the history easy to understand</h2>
+        <ul class="check-list">
+          <li>Use a short branch name that describes one task.</li>
+          <li>Commit related changes together with a clear action message.</li>
+          <li>Use issues to assign work, record decisions and track blockers.</li>
+          <li>Update the README when setup, inputs or outputs change.</li>
+          <li>Pull and review before merging to reduce avoidable conflicts.</li>
+        </ul>
+      </section>
+
+      <section class="title-slide">
+        <img class="deck-logo" src="../assets/ephi-logo-2024.jpg" width="1590" height="1590" alt="Ethiopian Public Health Institute">
+        <p class="deck-kicker">Ready to practise</p>
+        <h1>Open the Family Workspace</h1>
+        <p class="deck-subtitle">Create one branch, make one useful commit and open the first pull request.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/vendor/reveal/reveal.js"></script>
+  <script src="../assets/vendor/reveal/plugin/search/search.js"></script>
+  <script src="../assets/presentations.js"></script>
+</body>
+</html>

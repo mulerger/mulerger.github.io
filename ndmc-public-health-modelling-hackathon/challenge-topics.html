@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Approved family topic briefs for the NDMC Public Health Policy Modelling Hackathon 2026.">
+  <meta name="theme-color" content="#4a5864">
+  <meta property="og:title" content="Family Topic Briefs | NDMC Hackathon 2026">
+  <meta property="og:description" content="Four policy questions covering zero-dose immunization, antimalarial allocation and measles surveillance and transmission.">
+  <meta property="og:image" content="https://mulerger.github.io/ndmc-public-health-modelling-hackathon/assets/ephi-logo-2024.jpg">
+  <link rel="canonical" href="https://mulerger.github.io/ndmc-public-health-modelling-hackathon/challenge-topics.html">
+  <link rel="icon" type="image/jpeg" href="assets/ephi-logo-2024.jpg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>Family Topic Briefs | NDMC Hackathon 2026</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-nav">
+    <div class="nav-shell">
+      <a class="mobile-brand" href="index.html">NDMC Hackathon 2026</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation" data-nav-toggle><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation" data-primary-nav>
+        <a href="index.html">Home</a>
+        <a href="participants.html">Participants &amp; Organisers</a>
+        <a href="workspaces.html">Families</a>
+        <a href="resources.html" aria-current="page">Pre-reading</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="outcomes.html">Outcomes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <header class="page-heading">
+      <h1>Family Topic Briefs</h1>
+      <p>The four approved policy questions and the practical analytical scope used by the hackathon families.</p>
+    </header>
+
+    <nav class="topic-index" aria-label="Family topic briefs">
+      <ol>
+        <li><a href="#family-1">Zero-dose immunization</a></li>
+        <li><a href="#family-2">Antimalarial medicine forecasting and allocation</a></li>
+        <li><a href="#family-3">Measles alert rules</a></li>
+        <li><a href="#family-4">Measles transmission strategies</a></li>
+      </ol>
+    </nav>
+
+    <article class="topic-brief" id="family-1" aria-labelledby="family-1-topic-title">
+      <p class="family-number">Family 1</p>
+      <h2 id="family-1-topic-title">Zero-dose immunization</h2>
+      <p class="topic-subtitle">Estimating and mapping woreda-level zero-dose burden using household survey and routine data</p>
+
+      <h3>Decision question</h3>
+      <p class="family-question">Which woredas have the highest prevalence and largest number of zero-dose children in the latest validated year, and how certain are those estimates?</p>
+
+      <h3>Why it matters</h3>
+      <p>Household surveys provide a consistent measure of whether an age-eligible child received a first diphtheria-tetanus-pertussis-containing dose, but direct estimates are often too sparse for every woreda. Routine immunization data are available locally and frequently, yet reporting gaps and uncertain denominators can distort administrative coverage. Combining both sources can support better outreach, microplanning and resource allocation.</p>
+
+      <h3>Primary objective</h3>
+      <p>Estimate woreda-level zero-dose prevalence and counts, with uncertainty, by integrating household survey, routine immunization, population and contextual data.</p>
+
+      <div class="topic-columns">
+        <div>
+          <h3 id="family-1-work">Core work</h3>
+          <ol>
+            <li>Define a consistent zero-dose outcome for children aged 12–23 months.</li>
+            <li>Harmonize survey clusters, routine records, population denominators and woreda geography.</li>
+            <li>Compare an interpretable benchmark with a spatiotemporal small-area model.</li>
+            <li>Validate predictions and test sensitivity to definitions, denominators and boundary crosswalks.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="family-1-data">Main inputs</h3>
+          <ul>
+            <li>Household vaccination surveys</li>
+            <li>Routine Penta1/DTP1 reporting</li>
+            <li>Age-eligible population estimates</li>
+            <li>Woreda boundaries and service-access indicators</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Expected outputs</h3>
+      <ul>
+        <li>Woreda maps of estimated prevalence, count and uncertainty</li>
+        <li>A priority list distinguishing high prevalence from high numbers of zero-dose children</li>
+        <li>A concise data-quality and interpretation summary</li>
+        <li>Reproducible code and an exportable woreda-level results table</li>
+      </ul>
+      <p class="topic-scope"><strong>Hackathon scope:</strong> one validated target year on a common woreda boundary, with a historical benchmark where feasible.</p>
+    </article>
+
+    <article class="topic-brief" id="family-2" aria-labelledby="family-2-topic-title">
+      <p class="family-number">Family 2</p>
+      <h2 id="family-2-topic-title">Antimalarial medicine forecasting and allocation</h2>
+      <p class="topic-subtitle">Forecasting woreda-level medicine requirements and optimizing allocation under supply constraints</p>
+
+      <h3>Decision question</h3>
+      <p class="family-question">How should available antimalarial medicines be allocated across woredas for the next replenishment cycle to reduce expected stock-outs, excess stock and inequitable access?</p>
+
+      <h3>Why it matters</h3>
+      <p>Malaria burden changes across place and season, while observed medicine consumption can understate need when facilities experience stock-outs. A useful allocation model must connect epidemiological forecasts with inventory, pipeline stock, lead time, shelf life and the quantity available for distribution.</p>
+
+      <h3>Primary objective</h3>
+      <p>Develop and evaluate a woreda-level forecasting and constrained allocation model for selected antimalarial medicines and one agreed replenishment cycle.</p>
+
+      <div class="topic-columns">
+        <div>
+          <h3 id="family-2-work">Core work</h3>
+          <ol>
+            <li>Describe recent burden, seasonality, testing, reporting and medicine stock patterns.</li>
+            <li>Forecast cases and translate them into product-specific treatment requirements.</li>
+            <li>Estimate usable inventory, confirmed pipeline stock and likely shortages or excess.</li>
+            <li>Compare current practice with burden-based and equity-weighted allocation scenarios.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="family-2-data">Main inputs</h3>
+          <ul>
+            <li>Malaria surveillance and testing</li>
+            <li>Medicine issues, consumption and stock</li>
+            <li>Approved treatment and buffer-stock parameters</li>
+            <li>Population and service-capacity data</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Expected outputs</h3>
+      <ul>
+        <li>Monthly malaria and product-demand forecasts with uncertainty</li>
+        <li>Recommended allocations with expected shortages and excess stock</li>
+        <li>Maps and scenario comparisons for burden, service level and equity</li>
+        <li>An editable optimization model with documented assumptions</li>
+      </ul>
+      <p class="topic-scope"><strong>Hackathon scope:</strong> one or two priority medicines and one replenishment horizon using the best available woreda-level data.</p>
+    </article>
+
+    <article class="topic-brief" id="family-3" aria-labelledby="family-3-topic-title">
+      <p class="family-number">Family 3</p>
+      <h2 id="family-3-topic-title">Measles alert rules</h2>
+      <p class="topic-subtitle">Evaluating and optimizing woreda-level rules for earlier outbreak detection</p>
+
+      <h3>Decision question</h3>
+      <p class="family-question">Which simple and implementable woreda-level alert rule detects measles outbreaks early while keeping false alerts and investigation workload at an acceptable level?</p>
+
+      <h3>Why it matters</h3>
+      <p>An insensitive rule can delay action, while an overly sensitive rule can overwhelm surveillance teams with false alerts. The analysis distinguishes an operational alert from formal outbreak confirmation and compares transparent alternatives against historical outbreak episodes.</p>
+
+      <h3>Primary objective</h3>
+      <p>Evaluate the current approved alert rule and identify an operationally feasible alternative that improves early detection without producing an unacceptable false-alert burden.</p>
+
+      <div class="topic-columns">
+        <div>
+          <h3 id="family-3-work">Core work</h3>
+          <ol>
+            <li>Document the approved alert rule and construct independent reference outbreak episodes.</li>
+            <li>Measure sensitivity, timeliness, positive predictive value and investigation workload.</li>
+            <li>Compare a small set of absolute, incidence-based, adaptive or hybrid rules.</li>
+            <li>Select a simple rule and define the verification and escalation pathway after an alert.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="family-3-data">Main inputs</h3>
+          <ul>
+            <li>Case-based and weekly measles surveillance</li>
+            <li>Laboratory and outbreak-investigation records</li>
+            <li>Routine immunization and campaign data</li>
+            <li>Population, geography and approved surveillance guidance</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Expected outputs</h3>
+      <ul>
+        <li>A validated comparison of the current and candidate alert rules</li>
+        <li>A recommended operational rule and the action following an alert</li>
+        <li>A prototype that generates and explains woreda-week alerts</li>
+        <li>A technical note on trade-offs, implementation and limitations</li>
+      </ul>
+      <p class="topic-scope"><strong>Hackathon scope:</strong> retrospective out-of-sample evaluation of the current rule and no more than three or four prespecified alternatives.</p>
+    </article>
+
+    <article class="topic-brief" id="family-4" aria-labelledby="family-4-topic-title">
+      <p class="family-number">Family 4</p>
+      <h2 id="family-4-topic-title">Measles transmission strategies</h2>
+      <p class="topic-subtitle">Modelling transmission and comparing control and elimination strategies in Ethiopia</p>
+
+      <h3>Decision question</h3>
+      <p class="family-question">Under plausible assumptions, which combinations of routine immunization, catch-up vaccination, supplementary immunization and outbreak response are most likely to reduce measles burden and interrupt sustained transmission?</p>
+
+      <h3>Why it matters</h3>
+      <p>Measles transmission reflects accumulated susceptibility, coverage gaps, population change, campaign quality, importations and response speed. A transparent transmission model can reconstruct immunity gaps, reproduce historical patterns and compare intervention strategies while showing uncertainty.</p>
+
+      <h3>Primary objective</h3>
+      <p>Develop a transparent age-structured measles transmission model, calibrated to Ethiopian data, to compare the health impact and feasibility of alternative immunization and outbreak-response strategies.</p>
+
+      <div class="topic-columns">
+        <div>
+          <h3 id="family-4-work">Core work</h3>
+          <ol>
+            <li>Reconstruct age- and time-specific susceptibility from vaccination, campaigns, births and historical infection.</li>
+            <li>Build an age-structured transmission model with an observation process for reported cases.</li>
+            <li>Calibrate on an earlier period and validate against later epidemic patterns.</li>
+            <li>Compare routine coverage, catch-up, supplementary immunization and response scenarios.</li>
+          </ol>
+        </div>
+        <div>
+          <h3 id="family-4-data">Main inputs</h3>
+          <ul>
+            <li>Measles surveillance by age and time</li>
+            <li>MCV1, MCV2 and campaign coverage</li>
+            <li>Population, births and mortality</li>
+            <li>Biological parameters and age-specific contact patterns</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Expected outputs</h3>
+      <ul>
+        <li>A calibrated and documented age-structured transmission model</li>
+        <li>An age-specific susceptibility profile and baseline projection</li>
+        <li>Intervention scenario comparisons with uncertainty</li>
+        <li>A decision brief and a simple interface for changing key assumptions</li>
+      </ul>
+      <p class="topic-scope"><strong>Hackathon scope:</strong> a national or small-strata model with historical fit, held-out validation and four to six policy scenarios.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/ephi-logo-2024.jpg" width="1590" height="1590" loading="lazy" alt="">
+    <p><strong>Ethiopian Public Health Institute</strong><br>NDMC Public Health Policy Modelling Hackathon · 1–6 July 2026</p>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
