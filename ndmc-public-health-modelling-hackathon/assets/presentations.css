@@ -259,6 +259,24 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.five-column {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.five-column .rule-block {
+  padding-top: 15px;
+}
+
+.five-column h3 {
+  font-size: 22px;
+}
+
+.five-column p {
+  font-size: 18px;
+}
+
 .rule-block {
   padding: 18px 0;
   border-top: 3px solid var(--deck-green);
@@ -267,6 +285,50 @@ body {
 .rule-block p,
 .rule-block li {
   font-size: 21px;
+}
+
+.topic-overview .rule-block {
+  border-top-color: var(--topic-color, var(--deck-green));
+}
+
+.topic-slide {
+  border-top-color: var(--topic-color, var(--deck-green)) !important;
+}
+
+.topic-slide::before,
+.topic-slide .eyebrow {
+  color: var(--topic-color, var(--deck-green)) !important;
+}
+
+.topic-slide .rule-block {
+  border-top-color: var(--topic-color, var(--deck-green));
+}
+
+.topic-zero {
+  --topic-color: #167a51;
+}
+
+.topic-malaria {
+  --topic-color: #b87512;
+}
+
+.topic-alert {
+  --topic-color: #176fa8;
+}
+
+.topic-transmission {
+  --topic-color: #69558e;
+}
+
+.data-prototype h3 {
+  margin-bottom: 15px;
+  padding-bottom: 9px;
+  border-bottom: 3px solid var(--topic-color, var(--deck-green));
+}
+
+.data-prototype li {
+  margin-bottom: 7px;
+  font-size: 22px;
 }
 
 .flow {
