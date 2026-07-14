@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web presentation: policy questions, available data and prototype directions for the four NDMC hackathon topics.">
+  <link rel="icon" type="image/jpeg" href="../assets/ephi-logo-2024.jpg">
+  <link rel="stylesheet" href="../assets/vendor/reveal/reveal.css">
+  <link rel="stylesheet" href="../assets/presentations.css">
+  <title>Topic Presentations | NDMC Hackathon 2026</title>
+</head>
+<body>
+  <a class="deck-back" href="../presentations.html">← Presentations</a>
+
+  <div class="reveal">
+    <div class="slides">
+      <section class="title-slide">
+        <img class="deck-logo" src="../assets/ephi-logo-2024.jpg" width="1590" height="1590" alt="Ethiopian Public Health Institute">
+        <p class="deck-kicker">NDMC Public Health Policy Modelling Hackathon 2026</p>
+        <h1>Topic Presentations</h1>
+        <p class="deck-subtitle">Policy questions, available data and prototype direction</p>
+        <p class="deck-presenter">Mulugeta Geremew Geleso · 1–6 July 2026 · Stay Easy Plus Hotel, Addis Ababa</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Session agenda</p>
+        <h2>What this session will cover</h2>
+        <ul class="check-list">
+          <li>The four topic areas and the policy question behind each one.</li>
+          <li>Available data, expected sources and likely limitations.</li>
+          <li>A realistic prototype that can be demonstrated by Day 6.</li>
+          <li>Questions to resolve before family formation and work planning.</li>
+          <li>How topic presentations connect to clarification and the first work plan.</li>
+        </ul>
+        <p class="note">The aim is a sharper topic, a practical data plan and a realistic first prototype pathway.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Working pathway</p>
+        <h2>From topic to prototype</h2>
+        <div class="five-column">
+          <div class="rule-block"><h3>Policy question</h3><p>What decision should this support?</p></div>
+          <div class="rule-block"><h3>Available data</h3><p>What can be used now, and with what limits?</p></div>
+          <div class="rule-block"><h3>Method choice</h3><p>What fits the question, data and timeframe?</p></div>
+          <div class="rule-block"><h3>Prototype</h3><p>What can be demonstrated?</p></div>
+          <div class="rule-block"><h3>Policy message</h3><p>How should the result be used?</p></div>
+        </div>
+        <p class="note">The prototype should make a real programme decision easier to explain, defend and act on.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Four topic areas</p>
+        <h2>Distinct questions, one policy-facing standard</h2>
+        <div class="four-column topic-overview">
+          <div class="rule-block topic-zero"><h3>Zero-dose burden</h3><p>Estimate and map woreda-level prevalence and counts for immunization microplanning.</p></div>
+          <div class="rule-block topic-malaria"><h3>Malaria allocation</h3><p>Compare antimalarial medicine distribution with burden and seasonal need.</p></div>
+          <div class="rule-block topic-alert"><h3>Measles alert rules</h3><p>Test thresholds for timeliness, sensitivity and false-alert burden.</p></div>
+          <div class="rule-block topic-transmission"><h3>Measles transmission</h3><p>Compare control and elimination pathways through transmission modelling.</p></div>
+        </div>
+        <p class="note">Each family should finish with an interpretable, reproducible output linked to a real programme decision.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Shared standard</p>
+        <h2>Common output logic</h2>
+        <div class="three-column">
+          <div class="rule-block"><h3>Decision output</h3><p>A concise statement of the programme decision or prioritization problem.</p></div>
+          <div class="rule-block"><h3>Technical output</h3><p>A reproducible model, map, dashboard, threshold analysis or scenario tool.</p></div>
+          <div class="rule-block"><h3>Policy interpretation</h3><p>What changed, where action is needed and why.</p></div>
+        </div>
+        <p class="note"><strong>Minimum Day 6 package:</strong> decision question; data inventory and limitations; analytical workflow and checks; visual output and interpretation; next steps.</p>
+      </section>
+
+      <section class="topic-slide topic-zero">
+        <p class="eyebrow">Topic 1 · Zero-dose burden</p>
+        <h2>Estimating and mapping zero-dose children</h2>
+        <div class="three-column">
+          <div class="rule-block"><h3>Core policy question</h3><p>Which woredas have the highest zero-dose prevalence and counts, and how uncertain are those estimates?</p></div>
+          <div class="rule-block"><h3>Why it matters</h3><p>Survey estimates are strong nationally and regionally; routine data add local detail but require careful treatment.</p></div>
+          <div class="rule-block"><h3>Primary user</h3><p>Immunization programme teams setting equity-focused woreda priorities and allocating resources.</p></div>
+        </div>
+      </section>
+
+      <section class="topic-slide topic-zero">
+        <p class="eyebrow">Topic 1 · Data and prototype</p>
+        <h2>Zero-dose burden mapping</h2>
+        <div class="two-column data-prototype">
+          <div>
+            <h3>Available data</h3>
+            <ul>
+              <li>EDHS 2000, 2005, 2011 and 2016; Mini-EDHS 2019 vaccination histories.</li>
+              <li>Routine Penta1/DTP1 reporting, with reporting completeness.</li>
+              <li>Under-one population, facilities, urban–rural class and travel time.</li>
+              <li>Harmonized woreda boundaries.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Prototype direction</h3>
+            <ul>
+              <li>Estimate prevalence and counts by woreda.</li>
+              <li>Rank priority woredas with uncertainty intervals.</li>
+              <li>Produce a map and table for microplanning.</li>
+              <li>Document assumptions, gaps and interpretation limits.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Design target: credible enough for review and simple enough to explain.</p>
+      </section>
+
+      <section class="topic-slide topic-malaria">
+        <p class="eyebrow">Topic 2 · Malaria allocation</p>
+        <h2>Forecasting and allocating medicines</h2>
+        <div class="three-column">
+          <div class="rule-block"><h3>Core policy question</h3><p>How should available antimalarial medicines be allocated for the next replenishment cycle to reduce shortages, excess stock and inequity?</p></div>
+          <div class="rule-block"><h3>Why it matters</h3><p>Burden changes across place and season, while observed consumption can understate need during stock-outs.</p></div>
+          <div class="rule-block"><h3>Primary user</h3><p>Malaria programme and supply teams planning replenishment under a limited available supply.</p></div>
+        </div>
+      </section>
+
+      <section class="topic-slide topic-malaria">
+        <p class="eyebrow">Topic 2 · Data and prototype</p>
+        <h2>Forecasting and constrained allocation</h2>
+        <div class="two-column data-prototype">
+          <div>
+            <h3>Available data</h3>
+            <ul>
+              <li>Malaria surveillance, testing, reporting and seasonality.</li>
+              <li>Medicine issues, consumption, usable stock and pipeline stock.</li>
+              <li>Approved treatment and buffer-stock parameters.</li>
+              <li>Population and service-capacity data.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Prototype direction</h3>
+            <ul>
+              <li>Forecast cases and product-specific treatment requirements.</li>
+              <li>Estimate likely shortages and excess stock.</li>
+              <li>Compare current, burden-based and equity-weighted scenarios.</li>
+              <li>Recommend a constrained allocation for the agreed cycle.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Design target: credible enough for review and simple enough to explain.</p>
+      </section>
+
+      <section class="topic-slide topic-alert">
+        <p class="eyebrow">Topic 3 · Measles alert rules</p>
+        <h2>Evaluating thresholds for early detection</h2>
+        <div class="three-column">
+          <div class="rule-block"><h3>Core policy question</h3><p>Which alert rules detect measles events earlier while avoiding unnecessary false alerts?</p></div>
+          <div class="rule-block"><h3>Why it matters</h3><p>Fixed thresholds may not reflect population size, baseline incidence or surveillance sensitivity.</p></div>
+          <div class="rule-block"><h3>Primary user</h3><p>Surveillance and immunization teams applying consistent rules in routine monitoring.</p></div>
+        </div>
+      </section>
+
+      <section class="topic-slide topic-alert">
+        <p class="eyebrow">Topic 3 · Data and prototype</p>
+        <h2>Measles alert threshold evaluation</h2>
+        <div class="two-column data-prototype">
+          <div>
+            <h3>Available data</h3>
+            <ul>
+              <li>At least five years of case-based and weekly surveillance, where available.</li>
+              <li>Laboratory and outbreak-investigation records.</li>
+              <li>Routine immunization and campaign data.</li>
+              <li>Population, geography and approved surveillance guidance.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Prototype direction</h3>
+            <ul>
+              <li>Reconstruct current and alternative alerts.</li>
+              <li>Compare sensitivity, timeliness and positive predictive value.</li>
+              <li>Measure false-alert burden and investigation workload.</li>
+              <li>Recommend a practical rule and the action after an alert.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Design target: credible enough for review and simple enough to explain.</p>
+      </section>
+
+      <section class="topic-slide topic-transmission">
+        <p class="eyebrow">Topic 4 · Measles transmission</p>
+        <h2>Comparing control and elimination pathways</h2>
+        <div class="three-column">
+          <div class="rule-block"><h3>Core policy question</h3><p>Which combination of routine immunization, catch-up, SIAs and outbreak response is most likely to reduce burden and interrupt sustained transmission?</p></div>
+          <div class="rule-block"><h3>Why it matters</h3><p>Transmission reflects vaccination coverage, births, age structure and response timing.</p></div>
+          <div class="rule-block"><h3>Primary user</h3><p>Immunization and disease-prevention teams comparing coverage, catch-up and response strategies.</p></div>
+        </div>
+      </section>
+
+      <section class="topic-slide topic-transmission">
+        <p class="eyebrow">Topic 4 · Data and prototype</p>
+        <h2>Transmission and elimination modelling</h2>
+        <div class="two-column data-prototype">
+          <div>
+            <h3>Available data</h3>
+            <ul>
+              <li>Measles surveillance by age, time and location.</li>
+              <li>MCV1, MCV2 and SIA coverage over recent years.</li>
+              <li>Population size, births, mortality and age structure.</li>
+              <li>Biological parameters and age-specific contact patterns.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Prototype direction</h3>
+            <ul>
+              <li>Reconstruct age- and time-specific susceptibility.</li>
+              <li>Build a model with an observation process for reported cases.</li>
+              <li>Calibrate on an earlier period and validate later patterns.</li>
+              <li>Compare routine, catch-up, SIA and response scenarios.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Design target: credible enough for review and simple enough to explain.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">Before family formation</p>
+        <h2>Questions to clarify</h2>
+        <div class="two-column">
+          <ul class="check-list">
+            <li>Who will use the output, and for which decision?</li>
+            <li>Which data are available now?</li>
+            <li>Which gaps or biases must be stated?</li>
+          </ul>
+          <ul class="check-list">
+            <li>What method is realistic in six days?</li>
+            <li>What prototype will be demonstrated?</li>
+            <li>What message should reach programme leaders?</li>
+          </ul>
+        </div>
+        <p class="note">A family is ready when it can state the decision question, list the data and describe the prototype in one minute.</p>
+      </section>
+
+      <section>
+        <p class="eyebrow">From topic to family action</p>
+        <h2>Turn the brief into a work plan</h2>
+        <p class="lead-copy">By the end of Day 1, each family should have one topic, one decision question, one data plan and one realistic prototype direction.</p>
+        <div class="three-column">
+          <div class="rule-block"><h3>Before coding</h3><p>Confirm the question and data access.</p></div>
+          <div class="rule-block"><h3>Before modelling</h3><p>Agree on assumptions and validation.</p></div>
+          <div class="rule-block"><h3>Before presenting</h3><p>Translate results into a decision message.</p></div>
+        </div>
+        <p class="note">Next: topic clarification and open questions.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/vendor/reveal/reveal.js"></script>
+  <script src="../assets/vendor/reveal/plugin/search/search.js"></script>
+  <script src="../assets/presentations.js"></script>
+</body>
+</html>
