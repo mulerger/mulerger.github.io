@@ -128,10 +128,12 @@ const programmeCoordination = [
 const decisionMakers = [
   {
     id: "mulat-nigus",
-    name: "Mulat Nigus",
-    role: "Senior Expert, Manager & Advisor on Immunization Programmes · National EPI, Ministry of Health",
+    name: "Mulat Nigus Alemu",
+    photo: "assets/people/mulat-nigus-alemu.jpg",
+    photoPosition: "center 15%",
+    role: "National Senior Advisor for Immunization, Measles & Immunization/Health Systems · Ministry of Health",
     category: "Decision-maker",
-    bio: "Mulat Nigus, MPH, is a senior National EPI expert, manager and advisor on immunization programmes at Ethiopia's Ministry of Health. His work includes national immunization coverage and service-quality evaluation, E-NITAG development, measles supplemental immunization, hepatitis B birth-dose policy and equitable vaccine access. He joined the hackathon to connect analytical outputs with immunization planning and equity priorities.",
+    bio: "Mulat Nigus Alemu is a National Senior Advisor for Immunization, Measles, and Immunization/Health Systems at the Ministry of Health in Ethiopia. A Pasteur Institute/ADVAC-trained vaccinologist with over 18 years of experience at subnational and national levels, he specializes in designing national immunization strategies, advancing a life-course approach to vaccination, and strengthening health systems to achieve universal immunization and vaccination equity. Supported by an MPH from the University of Gondar and a Diploma in Vaccinology, Mulat excels at integrating advanced vaccinology standards with the national immunization program and public health frameworks. He is dedicated to driving data-driven policies and building resilient, sustainable immunization and health systems that safeguard populations in general, and vulnerable populations in particular.",
     skills: "Immunization programmes · National EPI · Measles · Coverage and equity",
     links: [
       ["Research profile", "https://openalex.org/A5034861484"],
@@ -142,6 +144,8 @@ const decisionMakers = [
   {
     id: "mandefro-kebede",
     name: "Mandefro Kebede",
+    photo: "assets/people/mandefro-kebede.jpg",
+    photoPosition: "center top",
     role: "Head, Surveillance and Disease Intelligence Division · EPHI",
     category: "Decision-maker",
     bio: "Mandefro Kebede is Head of the Surveillance and Disease Intelligence Division at EPHI. His work spans national sentinel surveillance, outbreak and epidemic intelligence, respiratory-virus epidemiology, genomic investigation and public-health emergency response. He joined the hackathon to connect modelling outputs with surveillance and response priorities.",
